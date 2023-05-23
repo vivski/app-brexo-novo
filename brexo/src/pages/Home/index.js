@@ -3,7 +3,6 @@ import Logo from '../../components/Logo';
 export default function Home(){
     return (
         <View style={styles.container}>
-        
         <Logo/>
 
         <Text> aqui será a tela inicial do aplicativo </Text>
