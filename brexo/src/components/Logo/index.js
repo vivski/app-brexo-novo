@@ -3,10 +3,7 @@ import {View,StyleSheet,Text,StatusBar,Image} from 'react-native'
 
 
 
-const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 68;
-
-
-export default function Header(){
+export default function Logo(){
     const logo = require('./../img/brexo-logo.png')
     return(
     <View styles={styles.container}> 
@@ -19,11 +16,11 @@ export default function Header(){
 const styles = StyleSheet.create({
     container:{
     backgroundColor:'#ffff',
-    paddingTop: statusBarHeight
+    // paddingTop: statusBarHeight
     },
     logo: {
-        width: 150,
-        height: 50,
-        resizeMode: 'contain',
+        width: 300,
+        height: 200,
+        // resizeMode: 'contain',
       }
 })
