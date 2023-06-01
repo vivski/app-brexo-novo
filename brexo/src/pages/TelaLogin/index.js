@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, Pressable} from 'react-native';
 import Constants from 'expo-constants';
 import Logo from '../../components/Logo';
 
-export default function Home({navigation}){
+export default function TelaLogin({navigation}){
     return (
         <View style={styles.container}>
         <Logo/>

@@ -26,6 +26,7 @@ export default function TelaPrincipal(){
                     style={{ width: 160, height: 160, borderRadius: 6}}
                     source={require('../../components/img/icone-blusa.png')}
                 />
+                    <Text>blusas</Text>
             </Pressable>
 
             <Pressable>
@@ -33,6 +34,7 @@ export default function TelaPrincipal(){
                     style={{ width: 160, height: 160, borderRadius: 6}} 
                     source={require('../../components/img/icone-calca.png')}
                 />
+                    <Text>calças</Text>
             </Pressable>
         </View>
 
@@ -42,6 +44,7 @@ export default function TelaPrincipal(){
                     style={{ width: 160, height: 160, borderRadius: 6 }}
                     source={require('../../components/img/icone-short.png')}
                 />
+                    <Text>short</Text>
             </Pressable>
 
             <Pressable style={{ paddingLeft: 10, paddingBottom: 16}}>
@@ -49,6 +52,7 @@ export default function TelaPrincipal(){
                     style={{ width: 160, height: 160, borderRadius: 6 }}
                     source={require('../../components/img/icone-vestido.png')}
                 />
+                    <Text>vestido</Text>
             </Pressable>
         </View>
 
@@ -56,7 +60,9 @@ export default function TelaPrincipal(){
             <Pressable>
                 <Image
                     style={{ width: 160, height: 160, borderRadius: 6 }}
-                    source={require('../../components/img/icone-moletom.png')}/>
+                    source={require('../../components/img/icone-moletom.png')}
+                />
+                    <Text>moletom</Text>
             </Pressable>
 
             <Pressable>
@@ -64,6 +70,7 @@ export default function TelaPrincipal(){
                     style={{ width: 160, height: 160, borderRadius: 6 }}
                     source={require('../../components/img/icone-biquini.png')}
                 />
+                    <Text>biquíni</Text>
             </Pressable>
         </View> 
 
