@@ -62,4 +62,5 @@ export default function TelaPrincipal(){
             borderRadius: 20,
             padding: 5
         },
+
     });
