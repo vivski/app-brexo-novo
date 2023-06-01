@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, TextInput,Image,  Pressable} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Image, Pressable} from 'react-native';
 import Header from '../../components/Header';
 
 export default function TelaPrincipal(){
@@ -10,13 +10,15 @@ export default function TelaPrincipal(){
             <View style={styles.botaoPesquisar}>
                 <TextInput style={styles.cssInput}/>
 
-                <Pressable style={{paddingLeft: 10 }}>
-                    <Image style={{ width: 20, height: 20}}
+                <Pressable style={{paddingLeft: 10 }} >
+                <View style={{ width: 20, height: 20}}>
+                    <Image
                         source={require('../../components/img/search-icon-png.png')} />
+                </View>
                 </Pressable>
             </View>
     
-        <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11}}> 
+    <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
 
         <View style={{ display: 'flex', alignSelf: 'center', flexDirection: 'row',backgroundColor:'#D9D9D9'}}>
             <Pressable> 
@@ -34,37 +36,36 @@ export default function TelaPrincipal(){
             </Pressable>
         </View>
 
-        <View style={{display: 'flex', alignSelf: 'center', flexDirection: 'row'}}>
+        <View style={{display: 'flex', alignSelf: 'center', flexDirection: 'row', backgroundColor: '#D9D9D9', marginTop: 10}}>
             <Pressable>
-                <Image>
+                <Image
                     style={{ width: 160, height: 160, borderRadius: 6 }}
                     source={require('../../components/img/icone-short.png')}
-                </Image>
+                />
             </Pressable>
 
             <Pressable style={{ paddingLeft: 10, paddingBottom: 16}}>
-                <Image>
+                <Image
                     style={{ width: 160, height: 160, borderRadius: 6 }}
                     source={require('../../components/img/icone-vestido.png')}
-                </Image>
+                />
             </Pressable>
         </View>
 
-        <View style={{display: 'flex', alignSelf: 'center', flexDirection: 'row'}}>
+        <View style={{display: 'flex', alignSelf: 'center', flexDirection: 'row', backgroundColor: '#D9D9D9', marginTop: 10}}>
             <Pressable>
-                <Image>
+                <Image
                     style={{ width: 160, height: 160, borderRadius: 6 }}
-                    source={require('../../components/img/icone-moletom.png')}
-                </Image>
+                    source={require('../../components/img/icone-moletom.png')}/>
             </Pressable>
 
             <Pressable>
-                <Image>
+                <Image
                     style={{ width: 160, height: 160, borderRadius: 6 }}
                     source={require('../../components/img/icone-biquini.png')}
-                </Image>
+                />
             </Pressable>
-        </View>
+        </View> 
 
     </View> 
  </View>
