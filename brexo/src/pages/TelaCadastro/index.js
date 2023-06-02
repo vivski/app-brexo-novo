@@ -23,13 +23,12 @@ export default function TelaLogin({navigation}){
             </View>
         </View>
 
-            <View style={{flex: 5, alignItems: 'center', backgroundColor: 'white'}}>
-                <View style={{ textAlign: 'center', color: '#3C3838', fontWeight: 'regular', marginBottom: 10, marginTop: 10}}>
-                <Text>esqueceu a senha?</Text>
-                </View>
+            <View>
+                <Text style={{marginTop:10, textAlign: 'center' }}>confirmar senha:</Text>
+                <TextInput style={{ background: '#fff',borderWidth: 1, width: 240, textAlign: 'start', color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}} secureTextEntry={'true'}/>
             </View>
 
-            <Pressable onPress={() => navigation.navigate('TelaInicial')}
+            <Pressable onPress={() => navigation.navigate('TelaLogin')}
              style={{backgroundColor: '#666464', 
              textAlign: 'center', 
              borderRadius: 4, width: 100, 
@@ -37,7 +36,7 @@ export default function TelaLogin({navigation}){
              justifyContent: 'center', 
              alignItems: 'center'}}>
 
-            <Text style={{color: "white"}}>entrar</Text>
+            <Text style={{color: "white"}}>cadastrar</Text>
 
             </Pressable>
 
@@ -47,11 +46,6 @@ export default function TelaLogin({navigation}){
             paddingRight: 110, 
             marginBottom: 10}}>
                 
-            <Text 
-            style={{textAlign: 'center', 
-            color: '#3C3838', 
-            fontWeight: 'regular', 
-            marginTop: 10}}> criar conta</Text>
             </View>
         </View>
     );
