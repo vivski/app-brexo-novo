@@ -20,10 +20,10 @@ export default function TelaPrincipal(){
     
     <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
 
-        <View style={{ display: 'flex', alignSelf: 'center', flexDirection: 'row',backgroundColor:'#D9D9D9'}}>
+        <View style={styles.cssViewCategorias}>
             <Pressable> 
                 <Image
-                    style={{ width: 160, height: 160, borderRadius: 6}}
+                    style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-blusa.png')}
                 />
                     <Text>blusas</Text>
@@ -31,17 +31,17 @@ export default function TelaPrincipal(){
 
             <Pressable>
                 <Image
-                    style={{ width: 160, height: 160, borderRadius: 6}} 
+                    style={styles.cssImagensCategorias} 
                     source={require('../../components/img/icone-calca.png')}
                 />
                     <Text>calças</Text>
             </Pressable>
         </View>
 
-        <View style={{display: 'flex', alignSelf: 'center', flexDirection: 'row', backgroundColor: '#D9D9D9', marginTop: 10}}>
+        <View style={styles.cssViewCategorias}>
             <Pressable>
                 <Image
-                    style={{ width: 160, height: 160, borderRadius: 6 }}
+                    style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-short.png')}
                 />
                     <Text>short</Text>
@@ -49,17 +49,17 @@ export default function TelaPrincipal(){
 
             <Pressable style={{ paddingLeft: 10, paddingBottom: 16}}>
                 <Image
-                    style={{ width: 160, height: 160, borderRadius: 6 }}
+                    style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-vestido.png')}
                 />
                     <Text>vestido</Text>
             </Pressable>
         </View>
 
-        <View style={{display: 'flex', alignSelf: 'center', flexDirection: 'row', backgroundColor: '#D9D9D9', marginTop: 10}}>
+        <View style={styles.cssViewCategorias}>
             <Pressable>
                 <Image
-                    style={{ width: 160, height: 160, borderRadius: 6 }}
+                    style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-moletom.png')}
                 />
                     <Text>moletom</Text>
@@ -67,7 +67,7 @@ export default function TelaPrincipal(){
 
             <Pressable>
                 <Image
-                    style={{ width: 160, height: 160, borderRadius: 6 }}
+                    style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-biquini.png')}
                 />
                     <Text>biquíni</Text>
@@ -100,5 +100,17 @@ export default function TelaPrincipal(){
             borderRadius: 20,
             padding: 5
         },
+        cssImagensCategorias:{
+            width: 160,
+            height: 160, 
+            borderRadius: 6 
+        }, 
+        cssViewCategorias:{
+            display: 'flex',
+            alignSelf: 'center',
+            flexDirection: 'row', 
+            backgroundColor: '#D9D9D9', 
+            marginTop: 10
+        }
 
     });
