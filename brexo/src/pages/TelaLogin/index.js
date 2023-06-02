@@ -29,14 +29,19 @@ export default function TelaLogin(){
 
             <View style={{flex: 5, alignItems: 'center', backgroundColor: 'white'}}>
                 <View style={{ textAlign: 'center', color: '#3C3838', fontWeight: 'regular', marginBottom: 10, marginTop: 10}}>
-                <Text>esqueceu a senha?</Text>
+
+                <Pressable onPress={() => navigation.navigate('TelaRecuperacaoSenha')}>
+                    esqueceu a senha?
+                </Pressable>
+                
                 </View>
             </View>
 
             <Pressable onPress={() => navigation.navigate('TelaPrincipal')}
              style={{backgroundColor: '#666464', 
              textAlign: 'center', 
-             borderRadius: 4, width: 100, 
+             borderRadius: 4, 
+             width: 100, 
              height: 30, 
              justifyContent: 'center', 
              alignItems: 'center'}}>
@@ -51,11 +56,13 @@ export default function TelaLogin(){
             paddingRight: 110, 
             marginBottom: 10}}>
                 
-            <Text 
-            style={{textAlign: 'center', 
-            color: '#3C3838', 
-            fontWeight: 'regular', 
-            marginTop: 10}}> criar conta</Text>
+
+            <Pressable onPress={() => navigation.navigate('TelaCadastro')}
+             style={{textAlign: 'center', 
+             color: '#3C3838', 
+             fontWeight: 'regular', 
+             marginTop: 10}}> criar conta
+            </Pressable>
             </View>
         </View>
     );
