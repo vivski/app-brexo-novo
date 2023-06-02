@@ -2,9 +2,13 @@ import {StyleSheet, Text, View, Pressable, Image, TextInput} from 'react-native'
 import Constants from 'expo-constants';
 // import Logo from '../../components/Logo';
 import Logo from '../../components/img/brexo-logo.png';
+import { useNavigation } from '@react-navigation/native'
 
 
-export default function TelaLogin({navigation}){
+export default function TelaLogin(){
+
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <View style={styles.cssLogo}>
@@ -29,7 +33,7 @@ export default function TelaLogin({navigation}){
                 </View>
             </View>
 
-            <Pressable onPress={() => navigation.navigate('Inicial')}
+            <Pressable onPress={() => navigation.navigate('TelaPrincipal')}
              style={{backgroundColor: '#666464', 
              textAlign: 'center', 
              borderRadius: 4, width: 100, 
