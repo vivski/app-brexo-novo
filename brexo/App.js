@@ -46,11 +46,11 @@ export default function App() {
         component={TelaUsuario}
       /> */}
 
-      {/* <Stack.Screen 
-        name="TelaRecuperacaoDeSenha" 
+      <Stack.Screen 
+        name="TelaRecuperacaoSenha" 
         component={TelaRecuperacaoSenha}
       />
-       */}
+      
       </Stack.Navigator>
     </NavigationContainer>
   );

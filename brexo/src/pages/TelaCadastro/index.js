@@ -4,7 +4,7 @@ import Constants from 'expo-constants';
 import Logo from '../../components/img/brexo-logo.png';
 
 
-export default function TelaLogin({navigation}){
+export default function TelaCadastro({navigation}){
     return (
         <View style={styles.container}>
             <View style={styles.cssLogo}>

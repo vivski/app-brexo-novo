@@ -27,17 +27,18 @@ export default function TelaLogin(){
             </View>
         </View>
 
-            <View style={{flex: 5, alignItems: 'center', backgroundColor: 'white'}}>
-                <View style={{ textAlign: 'center', color: '#3C3838', fontWeight: 'regular', marginBottom: 10, marginTop: 10}}>
 
-                <Pressable onPress={() => navigation.navigate('TelaRecuperacaoSenha')}>
-                    esqueceu a senha?
-                </Pressable>
-                
+            <Pressable onPress={() => navigation.navigate('TelaRecuperacaoSenha')}>
+                <View style={{flex: 5, alignItems: 'center', backgroundColor: 'white'}}>
+                <View style={{ textAlign: 'center', color: '#3C3838', fontWeight: 'regular', marginBottom: 10, marginTop: 10}}>
+                   <Text>esqueceu a senha?</Text>
                 </View>
-            </View>
+                </View>
+            </Pressable>
+
 
             <Pressable onPress={() => navigation.navigate('TelaPrincipal')}
+
              style={{backgroundColor: '#666464', 
              textAlign: 'center', 
              borderRadius: 4, 
@@ -49,21 +50,21 @@ export default function TelaLogin(){
             <Text style={{color: "white"}}>entrar</Text>
 
             </Pressable>
-
-            <View 
-            style={{backgroundColor: 'white', 
-            paddingLeft: 110, 
-            paddingRight: 110, 
-            marginBottom: 10}}>
                 
 
             <Pressable onPress={() => navigation.navigate('TelaCadastro')}
              style={{textAlign: 'center', 
              color: '#3C3838', 
              fontWeight: 'regular', 
-             marginTop: 10}}> criar conta
+             marginTop: 10}}> 
+            <Text 
+            style={{backgroundColor: 'white', 
+            paddingLeft: 110, 
+            paddingRight: 110, 
+            marginBottom: 10}}>
+             criar conta
+            </Text>
             </Pressable>
-            </View>
         </View>
     );
     
