@@ -10,7 +10,7 @@ export default function TelaPrincipal(){
             <View style={styles.botaoPesquisar}>
                 <TextInput style={styles.cssInput}/>
 
-                <Pressable style={{paddingLeft: 10 }} >
+                < Pressable style={{paddingLeft: 10 }} >
                 <View style={{ width: 20, height: 20}}>
                     <Image
                         source={require('../../components/img/search-icon-png.png')} />
@@ -83,7 +83,11 @@ export default function TelaPrincipal(){
     const styles = StyleSheet.create({
         container: {
          flex: 1,
-         backgroundColor:'#fff'
+         backgroundColor:'#fff',
+         
+        display: 'flex', 
+        //  flexDirection: 'column', 
+        //  paddingBottom: 11 
     
         },
         botaoPesquisar:{
@@ -110,7 +114,10 @@ export default function TelaPrincipal(){
             alignSelf: 'center',
             flexDirection: 'row', 
             backgroundColor: '#D9D9D9', 
-            marginTop: 10
-        }
+            marginTop: 10,
+            borderRadius:20,
+            paddingLeft: 10
+        },
+        
 
     });
