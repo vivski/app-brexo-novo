@@ -1,7 +1,17 @@
 import {StyleSheet, Text, View, TextInput, Image, Pressable} from 'react-native';
 import Header from '../../components/Header';
+import { useEffect } from 'react';
 
 export default function TelaPrincipal(){
+    useEffect(() =>{
+        const loading = async() => {
+        const result = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/categorias')
+        const data = await result.json
+        console.log(result)
+        }
+        loading()
+    }, [])
+    
     return (
 
     <View style={styles.container}>

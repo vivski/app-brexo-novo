@@ -44,18 +44,18 @@ export default function TelaLogin() {
                 <View>
 
                     <Text style={{ marginTop: 10 }}>senha:</Text>
-                    <TextInput style={{
-                        background: '#fff',
+                    
+                    <TextInput secureTextEntry={true} style={{
+                        backgroundColor: '#fff',
                         borderWidth: 1,
                         width: 240,
-                        textAlign: 'start',
+                        textAlign: 'left',
                         color: '#666464',
                         borderRadius: 4,
                         padding: 10,
                         marginBottom: 4, 
                         
                     }}
-                        secureTextEntry={'true'}
                     />
 
                 </View>
