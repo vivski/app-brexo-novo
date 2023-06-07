@@ -14,28 +14,30 @@ export default function TelaLogin() {
 
             <View style={styles.cssLogo}>
 
-                <Image style={{ width: 300, height: 200 }} source={Logo} />
+                <Image style={{ width: 300, 
+                height: 200, 
+                //flex:1,
+               // marginTop: 50
+                }} source={Logo} />
 
             </View>
 
-            <View style={{
-                flex: 1, backgroundColor: '#ffff',
-                alignItems: 'center',
-                justifyContent: 'flex-end'
-            }}>
+            <View style={styles.containerPrincipal}>
+               
                 <View>
 
                     <Text>e-mail:</Text>
                     <TextInput style={{
+
                         background: '#fff',
                         borderWidth: 1,
                         width: 240,
                         color: '#666464',
                         borderRadius: 4,
                         padding: 10,
-                        marginBottom: 4
-                    }}
-                    />
+                        marginBottom: 4,
+
+                    }}/>
 
                 </View>
 
@@ -50,19 +52,20 @@ export default function TelaLogin() {
                         color: '#666464',
                         borderRadius: 4,
                         padding: 10,
-                        marginBottom: 4
+                        marginBottom: 4, 
+                        
                     }}
                         secureTextEntry={'true'}
                     />
 
                 </View>
-            </View>
+            </View>    
 
-
+            <View style={styles.botoesInferiores}> 
             <Pressable onPress={() => navigation.navigate('TelaRecuperacaoSenha')}>
 
                 <View style={{
-                    flex: 5,
+                    //flex: 5,
                     alignItems: 'center',
                     backgroundColor: 'white'
                 }}>
@@ -82,22 +85,24 @@ export default function TelaLogin() {
 
             </Pressable>
 
+            
             <Pressable onPress={() => navigation.navigate('TelaPrincipal')}
-
                 style={{
                     backgroundColor: '#666464',
-                    textAlign: 'center',
                     borderRadius: 4,
-                    width: 100,
-                    height: 30,
-                    justifyContent: 'center',
-                    alignItems: 'center'
+                    alignSelf: 'center',
+                    width: 120,
+                    //height: 30,
+                    padding: 10,
+                    //
+                    //alignItems: 'center' 
                 }}>
+            <View style={{}}>
 
-                <Text style={{ color: "white" }}>entrar</Text>
+                <Text style={{ color: 'white',  textAlign: 'center', fontSize: 25 }}>entrar</Text>
 
+            </View>
             </Pressable>
-
 
             <Pressable onPress={() => navigation.navigate('TelaCadastro')}
 
@@ -120,6 +125,7 @@ export default function TelaLogin() {
 
             </Pressable>
         </View>
+    </View>
     );
 
 }
@@ -131,12 +137,22 @@ const styles = StyleSheet.create({
 
     },
     cssLogo: {
-        flex: 6,
+       // flex: 1,
         flexDirection: 'row',
         backgroundColor: '#ffff',
         alignItems: 'center',
         justifyContent: 'space-around',
         marginTop: Constants.statusBarHeight
     },
+    containerPrincipal:{
+        //flex: 2, 
+        backgroundColor: '#ffff',
+        alignItems: 'center',
+        justifyContent: 'flex-end',
+      //  marginTop: 350
+    },
+    botoesInferiores:{
+        alignSelf: 'center'
+    }
 
 });
