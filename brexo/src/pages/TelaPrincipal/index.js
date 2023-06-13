@@ -2,14 +2,19 @@ import {StyleSheet, Text, View, TextInput, Image, Pressable} from 'react-native'
 import Header from '../../components/Header';
 import { useEffect, useState } from 'react';
 
-export default function TelaPrincipal(){
+export default function TelaPrincipal({navigation}){
 
     const [categorias, setCategorias] = useState([]);
 
     useEffect(() =>{
         const load = async() => {
-            const result = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/categorias')
-            const data = await result.json()
+            const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/categorias')
+            const data = await resultApi.json()
+            let result = data.items.map(({ id, imagem }) => ({
+                id: id,
+                imagem: imagem,
+            }));
+
             setCategorias(result);
         }
 
@@ -19,7 +24,7 @@ export default function TelaPrincipal(){
     return (
 
     <View style={styles.container}>
-        <Header/>
+                <Header/>
         
             <View style={styles.botaoPesquisar}>
                 <TextInput style={styles.cssInput}/>
@@ -32,10 +37,12 @@ export default function TelaPrincipal(){
                 </Pressable>
             </View>
     
-    <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
+        <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
 
         <View style={styles.cssViewCategorias}>
-            <Pressable> 
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos")
+            }}> 
                 <Image
                     style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-blusa.png')}
@@ -87,9 +94,10 @@ export default function TelaPrincipal(){
                     <Text>biquíni</Text>
             </Pressable>
         </View> 
-
     </View> 
- </View>
+    ;
+</View>
+
     );
     
     }

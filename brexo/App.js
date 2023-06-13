@@ -8,6 +8,7 @@ import TelaCadastro from './src/pages/TelaCadastro/index';
 // import TelaFavoritos from './src/pages/TelaFavoritos/index';
 import TelaRecuperacaoSenha from '././src/pages/TelaRecuperacaoSenha/index';
 // import TelaUsuario from './src/pages/TelaUsuario/index';
+import TelaProdutos from './src/pages/TelaProdutos';
 
 const Stack = createNativeStackNavigator();
 
@@ -52,6 +53,11 @@ export default function App() {
       <Stack.Screen 
         name="TelaRecuperacaoSenha" 
         component={TelaRecuperacaoSenha}
+      />
+
+<Stack.Screen 
+        name="TelaProdutos" 
+        component={TelaProdutos}
       />
       
       </Stack.Navigator>
