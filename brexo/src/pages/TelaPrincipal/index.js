@@ -95,7 +95,7 @@ export default function TelaPrincipal({navigation}){
             </Pressable>
         </View> 
     </View> 
-    ;
+
 </View>
 
     );
