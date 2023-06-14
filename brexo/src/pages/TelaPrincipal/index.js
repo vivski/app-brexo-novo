@@ -10,7 +10,7 @@ export default function TelaPrincipal({navigation}){
         const load = async() => {
             const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/categorias')
             const data = await resultApi.json()
-            let result = data.items.map(({ id, imagem }) => ({
+            let result = data.map(({ id, imagem }) => ({
                 id: id,
                 imagem: imagem,
             }));

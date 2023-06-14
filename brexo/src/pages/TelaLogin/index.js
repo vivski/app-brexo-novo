@@ -29,7 +29,7 @@ export default function TelaLogin() {
                     <Text>e-mail:</Text>
                     <TextInput style={{
 
-                        background: '#fff',
+                        backgroundColor: '#fff',
                         borderWidth: 1,
                         width: 240,
                         color: '#666464',
