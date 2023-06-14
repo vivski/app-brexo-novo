@@ -32,7 +32,7 @@ export default function TelaLogin() {
                         backgroundColor: '#fff',
                         borderWidth: 1,
                         width: 240,
-                        color: '#666464',
+                        color: '#7A6276',
                         borderRadius: 4,
                         padding: 10,
                         marginBottom: 4,
@@ -50,7 +50,7 @@ export default function TelaLogin() {
                         borderWidth: 1,
                         width: 240,
                         textAlign: 'left',
-                        color: '#666464',
+                        color: '#7A6276',
                         borderRadius: 4,
                         padding: 10,
                         marginBottom: 4, 
@@ -108,7 +108,7 @@ export default function TelaLogin() {
 
                 style={{
                     textAlign: 'center',
-                    color: '#3C3838',
+                    color: '#7A6276',
                     fontWeight: 'regular',
                     marginTop: 10
                 }}>
