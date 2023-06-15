@@ -32,7 +32,7 @@ export default function TelaPrincipal({navigation}){
                 < Pressable style={{paddingLeft: 10 }} >
                 <View style={{ width: 20, height: 20}}>
                     <Image style={{width: 20, height: 20 }}
-                        source={require('../../components/img/search-icon-png.png')} />
+                        source={require('../../../assets/img/icone-pesquisa.png')} />
                 </View>
                 </Pressable>
             </View>
@@ -45,7 +45,7 @@ export default function TelaPrincipal({navigation}){
             }}> 
                 <Image
                     style={styles.cssImagensCategorias}
-                    source={require('../../components/img/icone-blusa.png')}
+                    source={require('../../../assets/img/icone-blusa.png')}
                 />
                     <Text>blusas</Text>
             </Pressable>
@@ -55,7 +55,7 @@ export default function TelaPrincipal({navigation}){
             }}>
                 <Image
                     style={styles.cssImagensCategorias} 
-                    source={require('../../components/img/icone-calca.png')}
+                    source={require('../../../assets/img/icone-calca.png')}
                 />
                     <Text>calças</Text>
             </Pressable>
@@ -67,7 +67,7 @@ export default function TelaPrincipal({navigation}){
             }}>
                 <Image
                     style={styles.cssImagensCategorias}
-                    source={require('../../components/img/icone-short.png')}
+                    source={require('../../../assets/img/icone-short.png')}
                 />
                     <Text>short</Text>
             </Pressable>
@@ -77,7 +77,7 @@ export default function TelaPrincipal({navigation}){
             }}  style={{ paddingLeft: 10, paddingBottom: 16}}>
                 <Image
                     style={styles.cssImagensCategorias}
-                    source={require('../../components/img/icone-vestido.png')}
+                    source={require('../../../assets/img/icone-vestido.png')}
                 />
                     <Text>vestido</Text>
             </Pressable>
@@ -89,7 +89,7 @@ export default function TelaPrincipal({navigation}){
             }}>
                 <Image
                     style={styles.cssImagensCategorias}
-                    source={require('../../components/img/icone-moletom.png')}
+                    source={require('../../../assets/img/icone-moletom.png')}
                 />
                     <Text>moletom</Text>
             </Pressable>
@@ -99,7 +99,7 @@ export default function TelaPrincipal({navigation}){
             }}>
                 <Image
                     style={styles.cssImagensCategorias}
-                    source={require('../../components/img/icone-biquini.png')}
+                    source={require('../../../assets/img/icone-biquini.png')}
                 />
                     <Text>biquíni</Text>
             </Pressable>

@@ -1,7 +1,7 @@
 import {StyleSheet, Text, View, Pressable, Image, TextInput} from 'react-native';
 import Constants from 'expo-constants';
-// import Logo from '../../components/Logo';
-import Logo from '../../components/img/brexo-logo.png';
+ import Logo from '../../components/Logo';
+//  import Logo from '../../../components/img/brexo-logo.png';
 
 
 export default function TelaCadastro({navigation}){

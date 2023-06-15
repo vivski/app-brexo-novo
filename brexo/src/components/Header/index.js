@@ -7,7 +7,7 @@ const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 :
 
 
 export default function Header(){
-    const logo = require('./../img/brexo-logo.png')
+    const logo = require('../../../assets/img/brexo-logo.png')
     return(
     <View styles={styles.container}> 
     <Image source={logo} style={styles.logo}/>
