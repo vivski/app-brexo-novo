@@ -9,9 +9,15 @@ export default function TelaPrincipal({navigation}){
 // linha pro cod
     const Categoria = ({id, imagem, nome}) => (
     <View>
-         <Text>{id}</Text>
-         <Text>{nome}</Text>     
-         <Text>{imagem}</Text>          
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos", {id:id})
+            }}> 
+                <Image
+                    style={styles.cssImagensCategorias}
+                    source={{uri:imagem}}
+                />
+                    <Text>{nome}</Text>
+            </Pressable>       
     </View>
     );
 
@@ -53,11 +59,12 @@ export default function TelaPrincipal({navigation}){
     <View>
         <FlatList
         data={categorias}
-        renderItem={(categoria) => (
+        numColumns={2}
+        renderItem={({item}) => (
         <Categoria 
-            imagem={categoria.imagem}
-            nome={categoria.nome}
-            id={categoria.id}
+            imagem={item.imagem}
+            nome={item.nome}
+            id={item.id}
         />
         )}
         />    
