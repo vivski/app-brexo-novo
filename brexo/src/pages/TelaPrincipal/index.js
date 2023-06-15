@@ -1,18 +1,28 @@
-import {StyleSheet, Text, View, TextInput, Image, Pressable} from 'react-native';
+import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'react-native';
 import Header from '../../components/Header';
 import { useEffect, useState } from 'react';
+import { SafeAreaView } from 'react-native-web';
 
 export default function TelaPrincipal({navigation}){
 
-    const [categorias, setCategorias] = useState([]);
+const [categorias, setCategorias] = useState([]);
+// linha pro cod
+    const Categoria = ({imagem}) => (
+    <View>
+            <Text> {imagem} </Text> 
+            <Text> {nome} </Text>
+            <Text> {id} </Text>    
+    </View>
+    );
 
     useEffect(() =>{
         const load = async() => {
             const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/categorias')
             const data = await resultApi.json()
-            let result = data.map(({ id, imagem }) => ({
+            let result = data.map(({ id, imagem, nome }) => ({
                 id: id,
                 imagem: imagem,
+                nome: nome
             }));
 
             setCategorias(result);
@@ -38,6 +48,24 @@ export default function TelaPrincipal({navigation}){
             </View>
     
         <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
+       
+    <View>
+        <FlatList
+        data={categorias}
+        renderItem={({categorias}) => (
+        <Categoria 
+        imagem={categorias.imagem}
+        nome={categorias.nome}
+        id={categorias.id}
+        />
+        )}
+        />    
+    </View>
+    
+
+
+
+    
 
         
         
