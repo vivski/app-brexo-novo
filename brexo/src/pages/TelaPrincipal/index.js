@@ -5,13 +5,13 @@ import { SafeAreaView } from 'react-native-web';
 
 export default function TelaPrincipal({navigation}){
 
-const [categorias, setCategorias] = useState([]);
+    const [categorias, setCategorias] = useState([]);
 // linha pro cod
-    const Categoria = ({imagem}) => (
+    const Categoria = ({id, imagem, nome}) => (
     <View>
-            <Text> {imagem} </Text> 
-            <Text> {nome} </Text>
-            <Text> {id} </Text>    
+         <Text>{id}</Text>
+         <Text>{nome}</Text>     
+         <Text>{imagem}</Text>          
     </View>
     );
 
@@ -49,28 +49,22 @@ const [categorias, setCategorias] = useState([]);
     
         <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
        
+
     <View>
         <FlatList
         data={categorias}
-        renderItem={({categorias}) => (
+        renderItem={(categoria) => (
         <Categoria 
-        imagem={categorias.imagem}
-        nome={categorias.nome}
-        id={categorias.id}
+            imagem={categoria.imagem}
+            nome={categoria.nome}
+            id={categoria.id}
         />
         )}
         />    
     </View>
     
 
-
-
-    
-
-        
-        
-
-        <View style={styles.cssViewCategorias}>
+        {/* <View style={styles.cssViewCategorias}>
             <Pressable onPress={ () => {
                 navigation.navigate("TelaProdutos")
             }}> 
@@ -90,9 +84,9 @@ const [categorias, setCategorias] = useState([]);
                 />
                     <Text>calças</Text>
             </Pressable>
-        </View>
+        </View> */}
 
-        <View style={styles.cssViewCategorias}>
+        {/* <View style={styles.cssViewCategorias}>
             <Pressable onPress={ () => {
                 navigation.navigate("TelaProdutos")
             }}>
@@ -112,9 +106,9 @@ const [categorias, setCategorias] = useState([]);
                 />
                     <Text>vestido</Text>
             </Pressable>
-        </View>
+        </View> */}
 
-        <View style={styles.cssViewCategorias}>
+        {/* <View style={styles.cssViewCategorias}>
             <Pressable onPress={ () => {
                 navigation.navigate("TelaProdutos")
             }}>
@@ -134,7 +128,7 @@ const [categorias, setCategorias] = useState([]);
                 />
                     <Text>biquíni</Text>
             </Pressable>
-        </View> 
+        </View>  */}
     </View> 
 
 </View>
