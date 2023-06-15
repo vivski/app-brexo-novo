@@ -39,6 +39,9 @@ export default function TelaPrincipal({navigation}){
     
         <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
 
+        
+        
+
         <View style={styles.cssViewCategorias}>
             <Pressable onPress={ () => {
                 navigation.navigate("TelaProdutos")
