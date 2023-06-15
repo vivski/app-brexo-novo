@@ -31,7 +31,7 @@ export default function TelaPrincipal({navigation}){
 
                 < Pressable style={{paddingLeft: 10 }} >
                 <View style={{ width: 20, height: 20}}>
-                    <Image
+                    <Image style={{width: 20, height: 20 }}
                         source={require('../../components/img/search-icon-png.png')} />
                 </View>
                 </Pressable>
@@ -50,7 +50,9 @@ export default function TelaPrincipal({navigation}){
                     <Text>blusas</Text>
             </Pressable>
 
-            <Pressable>
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos")
+            }}>
                 <Image
                     style={styles.cssImagensCategorias} 
                     source={require('../../components/img/icone-calca.png')}
@@ -60,7 +62,9 @@ export default function TelaPrincipal({navigation}){
         </View>
 
         <View style={styles.cssViewCategorias}>
-            <Pressable>
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos")
+            }}>
                 <Image
                     style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-short.png')}
@@ -68,7 +72,9 @@ export default function TelaPrincipal({navigation}){
                     <Text>short</Text>
             </Pressable>
 
-            <Pressable style={{ paddingLeft: 10, paddingBottom: 16}}>
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos")
+            }}  style={{ paddingLeft: 10, paddingBottom: 16}}>
                 <Image
                     style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-vestido.png')}
@@ -78,7 +84,9 @@ export default function TelaPrincipal({navigation}){
         </View>
 
         <View style={styles.cssViewCategorias}>
-            <Pressable>
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos")
+            }}>
                 <Image
                     style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-moletom.png')}
@@ -86,7 +94,9 @@ export default function TelaPrincipal({navigation}){
                     <Text>moletom</Text>
             </Pressable>
 
-            <Pressable>
+            <Pressable onPress={ () => {
+                navigation.navigate("TelaProdutos")
+            }}>
                 <Image
                     style={styles.cssImagensCategorias}
                     source={require('../../components/img/icone-biquini.png')}
