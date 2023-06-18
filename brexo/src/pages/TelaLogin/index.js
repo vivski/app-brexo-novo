@@ -1,7 +1,11 @@
-import { StyleSheet, Text, View, Pressable, Image, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Image, TextInput} from 'react-native';
 import Constants from 'expo-constants';
 import Logo from '../../components/Logo';
 import { useNavigation } from '@react-navigation/native'
+import TabNavigator from '../../components/barraInferior';
+
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
 
 
 export default function TelaLogin() {
@@ -121,6 +125,9 @@ export default function TelaLogin() {
 
             </Pressable>
         </View>
+        
+
+
     </View>
     );
 

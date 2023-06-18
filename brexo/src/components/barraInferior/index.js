@@ -1,8 +1,12 @@
 import React from 'react'
-import {View,StyleSheet,Text,StatusBar,Image} from 'react-native';
+import {View,StyleSheet,Text,StatusBar,Image, Button, Pressable} from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 // import { NavigationContainer } from '@react-navigation/native';
+import TelaFavoritos from './../../pages/TelaFavoritos'
+import TelaPrincipal from './../../pages/TelaPrincipal'
+import TelaUsuario from './../../pages/TelaUsuario'
+
 
 import { IconButton } from 'react-native-paper';
 
@@ -10,36 +14,41 @@ const Tab = createMaterialBottomTabNavigator();
 
 
 
-function TelaDeInicio(){
-    return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text> tela de início </Text>
-    </View>
-    );
-}
-function TelaDeFavoritos(){
-    return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text> tela de favoritos </Text>
-    </View>
-    );
-}
-function ContaPessoal(){
-    return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-    <Text>  tela de conta pessoal </Text>
-    </View>
-    );
-}
+// function TelaDeInicio(){
+//     return(
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    
+//     </View>
+//     );
+// }
+// function TelaDeFavoritos(){
+//     return(
+    
+//     // <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//     <View>
+//     <Pressable onPress={ () => {
+//     navigation.navigate("TelaFavoritos")
+//     }}></Pressable>
+//     </View>
 
-function MinhasTelas() {
+//     );
+// }
+// function ContaPessoal(){
+//     return(
+//     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+//     <Text>  tela de conta pessoal </Text>
+//     </View>
+//     );
+// }
+
+function NavigatorTabs() {
     return(
 
     <Tab.Navigator initialRouteName="TelaDeInicio"
     activeColor="#e91e63"
     barStyle={{ backgroundColor: '#D9BBB0' }}>
     
-    <Tab.Screen name="TelaDeInicio" component={TelaDeInicio}
+    <Tab.Screen name="TelaPrincipal" component={TelaPrincipal}
     options={{
     tabBarLabel: '',
     tabBarIcon: ({ color, size }) => (
@@ -48,7 +57,7 @@ function MinhasTelas() {
     }}
     
     />
-    <Tab.Screen name="TelaDeFavoritos" component={TelaDeFavoritos}
+    <Tab.Screen name="TelaFavoritos" component={TelaFavoritos}
     options={{
     tabBarLabel: '',
     tabBarIcon: ({ color, size }) => (
@@ -57,7 +66,7 @@ function MinhasTelas() {
     }}
     />
 
-    <Tab.Screen name="ContaPessoal" component={ContaPessoal}
+    <Tab.Screen name="TelaUsuario" component={TelaUsuario}
     options={{
     tabBarLabel: '',
     tabBarIcon: ({ color, size }) => (
@@ -71,4 +80,4 @@ function MinhasTelas() {
     )
 }
 
-export default MinhasTelas;
+export default NavigatorTabs;

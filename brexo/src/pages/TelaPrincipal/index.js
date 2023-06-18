@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'react-native';
 import Header from '../../components/Header';
-import MinhasTelas from '../../components/barraInferior';
+import TabNavigator from '../../components/barraInferior';
 import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-web';
 
@@ -72,73 +72,9 @@ export default function TelaPrincipal({navigation}){
     </View>
     
 
-        {/* <View style={styles.cssViewCategorias}>
-            <Pressable onPress={ () => {
-                navigation.navigate("TelaProdutos")
-            }}> 
-                <Image
-                    style={styles.cssImagensCategorias}
-                    source={require('../../../assets/img/icone-blusa.png')}
-                />
-                    <Text>blusas</Text>
-            </Pressable>
-
-            <Pressable onPress={ () => {
-                navigation.navigate("TelaProdutos")
-            }}>
-                <Image
-                    style={styles.cssImagensCategorias} 
-                    source={require('../../../assets/img/icone-calca.png')}
-                />
-                    <Text>calças</Text>
-            </Pressable>
-        </View> */}
-
-        {/* <View style={styles.cssViewCategorias}>
-            <Pressable onPress={ () => {
-                navigation.navigate("TelaProdutos")
-            }}>
-                <Image
-                    style={styles.cssImagensCategorias}
-                    source={require('../../../assets/img/icone-short.png')}
-                />
-                    <Text>short</Text>
-            </Pressable>
-
-            <Pressable onPress={ () => {
-                navigation.navigate("TelaProdutos")
-            }}  style={{ paddingLeft: 10, paddingBottom: 16}}>
-                <Image
-                    style={styles.cssImagensCategorias}
-                    source={require('../../../assets/img/icone-vestido.png')}
-                />
-                    <Text>vestido</Text>
-            </Pressable>
-        </View> */}
-
-        {/* <View style={styles.cssViewCategorias}>
-            <Pressable onPress={ () => {
-                navigation.navigate("TelaProdutos")
-            }}>
-                <Image
-                    style={styles.cssImagensCategorias}
-                    source={require('../../../assets/img/icone-moletom.png')}
-                />
-                    <Text>moletom</Text>
-            </Pressable>
-
-            <Pressable onPress={ () => {
-                navigation.navigate("TelaProdutos")
-            }}>
-                <Image
-                    style={styles.cssImagensCategorias}
-                    source={require('../../../assets/img/icone-biquini.png')}
-                />
-                    <Text>biquíni</Text>
-            </Pressable>
-        </View>  */}
+       
     </View> 
-<MinhasTelas />
+<TabNavigator />
 </View>
 
     );

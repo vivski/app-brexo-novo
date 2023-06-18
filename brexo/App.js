@@ -5,7 +5,7 @@ import TelaLogin from './src/pages/TelaLogin/index';
 import TelaPrincipal from './src/pages/TelaPrincipal/index';
 import TelaCadastro from './src/pages/TelaCadastro/index';
 // import TelaCarrinho from './src/pages/TelaCarrinho/index';
-// import TelaFavoritos from './src/pages/TelaFavoritos/index';
+import TelaFavoritos from './src/pages/TelaFavoritos/index';
 import TelaRecuperacaoSenha from '././src/pages/TelaRecuperacaoSenha/index';
 // import TelaUsuario from './src/pages/TelaUsuario/index';
 import TelaProdutos from './src/pages/TelaProdutos';
@@ -35,20 +35,20 @@ export default function App() {
         component={TelaCadastro}
       />
         
-      {/* <Stack.Screen 
+       {/* <Stack.Screen 
         name="TelaCarrinho" 
         component={TelaCarrinho}
-      /> 
+      />  */}
 
       <Stack.Screen 
         name="TelaFavoritos" 
         component={TelaFavoritos}
       />
 
-      <Stack.Screen 
+      {/* <Stack.Screen 
         name="TelaUsuario" 
         component={TelaUsuario}
-      /> */}
+      />  */}
 
       <Stack.Screen 
         name="TelaRecuperacaoSenha" 
