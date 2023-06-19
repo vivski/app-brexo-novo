@@ -9,7 +9,7 @@ function TelaProdutos({ route }) {
     // linha pro codigo
     const Produto = ({ nome, imagem, preco }) => (
         <View style={{ width: 200, height: 250 }}>
-            
+
             <Pressable onPress={() => { }}>
                 {/* navigation.navigate("TelaProdutos", {id:id})  */}
                 <Image source={{ uri: imagem }} style={{ width: 150, height: 200, margin: 10 }} />
@@ -46,7 +46,7 @@ function TelaProdutos({ route }) {
     }, []);
 
     return (
-        <View style={{ alignSelf: 'center' }}>
+        <View style={{ alignSelf: 'center', background: '' }}>
             <View >
                 <FlatList
                     data={produtos}

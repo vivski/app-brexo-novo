@@ -98,7 +98,7 @@ export default function TelaPrincipal({navigation}){
             paddingBottom: 10
         },
         cssInput:{
-            // background: '#ffff',
+            background: '#F7F0F6',
             borderWidth: 1,
             width: 300,
             color: '#666464',
