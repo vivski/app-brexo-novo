@@ -26,7 +26,7 @@ function TelaProdutos({ route }) {
 
     useEffect(() => {
         const load = async () => {
-            const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/produtos')
+            const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/produtos/')
             const data = await resultApi.json();
             // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
 

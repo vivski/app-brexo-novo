@@ -4,7 +4,7 @@ import Header from '../../components/Header';
 import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-web';
 
-export default function TelaPrincipal({navigation}){
+export default function TelaCategorias({navigation}){
 
     const [categorias, setCategorias] = useState([]);
 // linha pro cod
