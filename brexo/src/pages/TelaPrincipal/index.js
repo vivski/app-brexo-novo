@@ -54,7 +54,7 @@ export default function TelaPrincipal({navigation}){
                 </Pressable>
             </View>
     
-        <View style={{display:'flex',flexDirection: 'column',paddingBottom: 11, marginTop: 10 }}>
+        <View style={{display:'flex',lexDirection: 'column',paddingBottom: 6, marginTop: 50, backgroundColor:'#F7F0F6' }}>
        
 
     <View>

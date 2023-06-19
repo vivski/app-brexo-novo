@@ -46,7 +46,7 @@ function TelaProdutos({ route }) {
     }, []);
 
     return (
-        <View style={{ alignSelf: 'center', background: '' }}>
+        <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
             <View >
                 <FlatList
                     data={produtos}
