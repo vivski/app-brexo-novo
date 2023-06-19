@@ -1,6 +1,6 @@
 import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'react-native';
 import Header from '../../components/Header';
-import TabNavigator from '../../components/barraInferior';
+// import TabNavigator from '../../components/barraInferior';
 import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-web';
 
@@ -74,7 +74,7 @@ export default function TelaPrincipal({navigation}){
 
        
     </View> 
-<TabNavigator />
+
 </View>
 
     );

@@ -2,7 +2,7 @@ import { StyleSheet, Text, View, Pressable, Image, TextInput} from 'react-native
 import Constants from 'expo-constants';
 import Logo from '../../components/Logo';
 import { useNavigation } from '@react-navigation/native'
-import TabNavigator from '../../components/barraInferior';
+import NavigatorTabs from '../../components/barraInferior'
 
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
@@ -86,7 +86,7 @@ export default function TelaLogin() {
             </Pressable>
 
             
-            <Pressable onPress={() => navigation.navigate('TelaPrincipal')}
+            <Pressable onPress={() => navigation.navigate('NavigatorTabs')}
                 style={{
                     backgroundColor: '#7A6276',
                     borderRadius: 4,
