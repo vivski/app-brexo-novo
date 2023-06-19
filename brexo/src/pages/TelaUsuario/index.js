@@ -1,4 +1,4 @@
-import MinhasTelas from '../../components/barraInferior';
+// import MinhasTelas from '../../components/barraInferior';
 import Header from '../../components/Header';
 
 

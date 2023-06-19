@@ -7,8 +7,9 @@ import TelaCadastro from './src/pages/TelaCadastro/index';
 // import TelaCarrinho from './src/pages/TelaCarrinho/index';
 import TelaFavoritos from './src/pages/TelaFavoritos/index';
 import TelaRecuperacaoSenha from '././src/pages/TelaRecuperacaoSenha/index';
-// import TelaUsuario from './src/pages/TelaUsuario/index';
+import TelaUsuario from './src/pages/TelaUsuario/index';
 import TelaProdutos from './src/pages/TelaProdutos';
+import NavigatorTabs from './src/components/barraInferior';
 
 const Stack = createNativeStackNavigator();
 
@@ -34,21 +35,22 @@ export default function App() {
         name="TelaCadastro" 
         component={TelaCadastro}
       />
+
+      <Stack.Screen 
+      name="NavigatorTabs"
+      component={NavigatorTabs}
+      />
         
-       {/* <Stack.Screen 
-        name="TelaCarrinho" 
-        component={TelaCarrinho}
-      />  */}
 
       <Stack.Screen 
         name="TelaFavoritos" 
         component={TelaFavoritos}
       />
 
-      {/* <Stack.Screen 
+      <Stack.Screen 
         name="TelaUsuario" 
         component={TelaUsuario}
-      />  */}
+      /> 
 
       <Stack.Screen 
         name="TelaRecuperacaoSenha" 
