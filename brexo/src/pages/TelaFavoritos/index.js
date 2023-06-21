@@ -8,7 +8,8 @@ export default function TelaFavoritos(){
     return(
     <View>
         <Header/>
-
+    <Text>aqui será a tela de favoritos </Text>
+    
     </View>
     );
 
