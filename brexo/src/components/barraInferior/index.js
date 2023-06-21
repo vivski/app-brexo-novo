@@ -3,8 +3,9 @@ import {View,StyleSheet,Text,StatusBar,Image, Button, Pressable} from 'react-nat
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import TelaFavoritos from './../../pages/TelaFavoritos'
-import TelaCategorias from '../../pages/TelaCategorias'
+// import TelaCategorias from '../../pages/TelaCategorias'
 import TelaUsuario from './../../pages/TelaUsuario'
+import NavigatorCategorias from '../../pages/NavigatorCategorias';
 
 
 import { IconButton } from 'react-native-paper';
@@ -18,7 +19,7 @@ function NavigatorTabs() {
     activeColor="#e91e63"
     barStyle={{ backgroundColor: '#D9BBB0' }}>
     
-    <Tab.Screen name="TelaPrincipal" component={TelaCategorias}
+    <Tab.Screen name="TelaPrincipal" component={NavigatorCategorias}
     options={{
     tabBarLabel: '',
     tabBarIcon: ({ color, size }) => (
