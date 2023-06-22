@@ -1,69 +1,49 @@
 // import TelaCategorias from "../TelaCategorias"
 
 // stack.navigator - 4 stack screens 
-
 //     TelaCategorias
 //     TelaProdutos
 //     TelaProduto
 //     TelaCarrinho 
 import React from 'react'
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TelaCategorias from './../../pages/TelaCategorias'
 import TelaProdutos from '../../pages/TelaProdutos'
 import TelaProduto from './../../pages/TelaProduto'
 import TelaCarrinho from './../../pages/TelaCarrinho'
 
+const Stack = createNativeStackNavigator();
 
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
-
-const Tab = createMaterialBottomTabNavigator();
 
 
 function NavigatorCategorias() {
-    return(
-
-    <Tab.Navigator initialRouteName="TelaDeInicio"
-    activeColor="#e91e63"
-    barStyle={{ backgroundColor: '#D9BBB0' }}>
+    return (
+        <Stack.Navigator
+            screenOptions={{
+            headerShown: false,
+          }}>
     
-    <Tab.Screen name="TelaPrincipal" component={TelaCategorias}
-    options={{
-    tabBarLabel: '',
-    tabBarIcon: ({ color, size }) => (
-    <IconButton icon="home" size={size} />
-    ),
-    }}
+          <Stack.Screen 
+            name="TelaCategorias" 
+            component={TelaCategorias}
+          />
     
-    />
-    <Tab.Screen name="TelaProdutos" component={TelaProdutos}
-    options={{
-    tabBarLabel: '',
-    tabBarIcon: ({ color, size }) => (
-    <IconButton icon="heart" size={size} />
-    ),
-    }}
-    />
-
-    <Tab.Screen name="TelaCarrinho" component={TelaProduto}
-    options={{
-    tabBarLabel: '',
-    tabBarIcon: ({ color, size }) => (
-    <IconButton icon="account-circle" size={size}/>
-    ),
-    }}
-    />
-
-<Tab.Screen name="TelaCarrinho" component={TelaCarrinho}
-    options={{
-    tabBarLabel: '',
-    tabBarIcon: ({ color, size }) => (
-    <IconButton icon="account-circle" size={size}/>
-    ),
-    }}
-    />
-
-    </Tab.Navigator>
+         <Stack.Screen 
+            name="TelaProdutos" 
+            component={TelaProdutos}
+          />
     
-    )
+         <Stack.Screen 
+            name="TelaProduto" 
+            component={TelaProduto}
+          />    
+         <Stack.Screen 
+            name="TelaCarrinho" 
+            component={TelaCarrinho}
+          />
+          </Stack.Navigator>
+       
+      );
 }
 
 export default NavigatorCategorias;

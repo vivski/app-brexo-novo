@@ -11,6 +11,8 @@ import TelaUsuario from './src/pages/TelaUsuario/index';
 // import TelaProdutos from './src/pages/TelaProdutos';
 import NavigatorTabs from './src/components/barraInferior';
 import NavigatorCategorias from './src/pages/NavigatorCategorias';
+import NavigatorFavoritos from './src/pages/NavigatorFavoritos';
+import NavigatorUsuario from './src/pages/NavigatorUsuario';
 
 const Stack = createNativeStackNavigator();
 
@@ -73,9 +75,19 @@ export default function App() {
         name="NavigatorCategorias" 
         component={NavigatorCategorias}
       />
+
+      <Stack.Screen 
+        name="NavigatorFavoritos" 
+        component={NavigatorFavoritos}
+      />
+
+      <Stack.Screen 
+        name="NavigatorUsuario" 
+        component={NavigatorUsuario}
+      />
       </Stack.Navigator>
     </NavigationContainer>
   );
 };
-
+  
 
