@@ -1,10 +1,14 @@
 import {StyleSheet, Text, View, Pressable, Image, TextInput} from 'react-native';
 import Constants from 'expo-constants';
  import Logo from '../../components/Logo';
+import { useState } from 'react';
 //  import Logo from '../../../components/img/brexo-logo.png';
 
 
 export default function TelaCadastro({navigation}){
+    const [email,setEmail] = useState()
+    const [senha, setSenha] = useState()
+
     return (
         <View style={styles.container}>
             <View style={styles.cssLogo}>
@@ -14,12 +18,21 @@ export default function TelaCadastro({navigation}){
         <View style={{flex: 1, backgroundColor: '#ffff', alignItems: 'center', justifyContent: 'flex-end'}}>
             <View>
                 <Text>e-mail:</Text>
-                <TextInput style={{ background: '#fff',borderWidth: 1, width: 240, color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}}/>
+                <TextInput
+                onChangeText={ (text) => {
+                setEmail(text)
+                }}  
+                style={{ background: '#fff',borderWidth: 1, width: 240, color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}}/>
             </View>
 
             <View>
                 <Text style={{marginTop:10}}>senha:</Text>
-                <TextInput style={{ background: '#fff',borderWidth: 1, width: 240, textAlign: 'start', color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}} secureTextEntry={'true'}/>
+                <TextInput
+                onChangeText={ (text) => {
+                setSenha(text)
+                }}         
+                
+            style={{ background: '#fff',borderWidth: 1, width: 240, textAlign: 'start', color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}} secureTextEntry={'true'}/>
             </View>
         </View>
 
