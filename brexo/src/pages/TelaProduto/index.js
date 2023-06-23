@@ -2,7 +2,6 @@ import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'rea
 
 import Header from '../../components/Header';
 
-// import TelaFavoritos from './../TelaFavoritos'
 
 
 export default function TelaProduto(){
