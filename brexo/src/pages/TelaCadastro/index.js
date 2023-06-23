@@ -5,10 +5,24 @@ import { useState } from 'react';
 //  import Logo from '../../../components/img/brexo-logo.png';
 
 
+
 export default function TelaCadastro({navigation}){
     const [email,setEmail] = useState()
     const [senha, setSenha] = useState()
-
+    const [confirmSenha, setConfirmSenha] = useState()
+    
+    function Cadastrar() {
+        if ( senha != confirmSenha) {
+            return;
+        }
+    fetch("http://localhost:3004/usuario", {
+        method:"POST",
+        body:{
+            email:email,
+            senha:senha
+        }
+    }) 
+}
     return (
         <View style={styles.container}>
             <View style={styles.cssLogo}>
@@ -38,10 +52,15 @@ export default function TelaCadastro({navigation}){
 
             <View>
                 <Text style={{marginTop:10, textAlign: 'center' }}>confirmar senha:</Text>
-                <TextInput style={{ background: '#fff',borderWidth: 1, width: 240, textAlign: 'start', color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}} secureTextEntry={'true'}/>
+                <TextInput
+                onChangeText={ (text) => {
+                setConfirmSenha(text)
+                }}
+                
+                style={{ background: '#fff',borderWidth: 1, width: 240, textAlign: 'start', color: '#666464', borderRadius: 4, padding: 10, marginBottom: 4}} secureTextEntry={'true'}/>
             </View>
 
-            <Pressable onPress={() => navigation.navigate('TelaLogin')}
+            <Pressable onPress={() => Cadastrar()}
              style={{backgroundColor: '#666464', 
              textAlign: 'center', 
              borderRadius: 4, width: 100, 
