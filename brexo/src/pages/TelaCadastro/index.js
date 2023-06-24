@@ -11,11 +11,11 @@ export default function TelaCadastro({navigation}){
     const [senha, setSenha] = useState()
     const [confirmSenha, setConfirmSenha] = useState()
     
-    function Cadastrar() {
+  async function Cadastrar() {
         if ( senha != confirmSenha) {
             return;
         }
-    fetch("http://localhost:3004/usuario", {
+    await fetch("http://localhost:3004/usuario", {
         method:"POST",
         body:{
             email:email,
