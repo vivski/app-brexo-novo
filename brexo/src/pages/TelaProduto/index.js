@@ -1,25 +1,40 @@
 import { StyleSheet, Text, View, TextInput, Image, Pressable, FlatList } from 'react-native';
 import { useEffect, useState } from 'react';
+import { Avatar, Button, Card } from 'react-native-paper';
 // import Header from '../../components/Header';
 
-export default function TelaProduto({route}) {
+export default function TelaProduto({ route }) {
 
-    const {produtoId} = route.params;
+    const { produtoId } = route.params;
 
     const [produto, setProduto] = useState({});
 
     const Produto = ({ nome, imagem, preco }) => (
-        <View style={{ width: 200, height: 250 }}>
+        <View>
 
-            <Pressable onPress={() => { }}>
-                <Image source={{ uri: imagem }} style={{ width: 150, height: 200, margin: 10 }} />
+            <Card style={{
+                width: 350,
+                height: 500,
+                marginTop: 150,
+                backgroundColor: '#F7F0F6'
+            }}>
+                <Card.Cover source={{ uri: imagem }}
+                    style={{
+                        width: 250,
+                        height: 300,
+                        margin: 10,
+                        alignSelf: 'center'
+                    }} />
 
-                <View style={{ width: 150 }}>
-                    <Text numberOfLines={1}> {nome} </Text>
-                    <Text> {preco} </Text>
-                </View>
+                <Card.Title title={nome} subtitle={preco}
+                    style={{ size: 50 }} />
 
-            </Pressable>
+                <Card.Actions>
+                    <Button icon="cart"></Button>
+                    <Button icon="heart"></Button>
+                </Card.Actions>
+
+            </Card>
         </View>
 
     );
@@ -35,12 +50,12 @@ export default function TelaProduto({route}) {
     }, []);
 
     return (
-        <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
+        <View style={{ alignSelf: 'center' }}>
             <View>
                 <Produto
-                nome={produto?.nome}
-                preco={produto?.preco}
-                imagem={produto?.imagem}/>
+                    nome={produto?.nome}
+                    preco={produto?.preco}
+                    imagem={produto?.imagem} />
             </View>
         </View>
     );
