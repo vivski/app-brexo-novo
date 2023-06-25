@@ -53,6 +53,7 @@ function TelaProdutos({ route, navigation }) {
                     numColumns={2}
                     renderItem={({ item }) => (
                         <Produto
+                            id={item.id}
                             nome={item.nome}
                             preco={item.preco}
                             imagem={item.imagem} />
