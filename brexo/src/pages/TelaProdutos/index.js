@@ -6,11 +6,11 @@ function TelaProdutos({ route, navigation }) {
     const idCategoria = route.params.id;
 
     const [produtos, setProdutos] = useState([]);
-    // linha pro codigo
-    const Produto = ({ nome, imagem, preco }) => (
+
+    const Produto = ({ id, nome, imagem, preco }) => (
         <View style={{ width: 200, height: 250 }}>
 
-            <Pressable onPress={() => { navigation.navigate('TelaProduto', {id:id})}}>
+            <Pressable onPress={() => { navigation.navigate('TelaProduto', {produtoId:id})}}>
                 {/* navigation.navigate("TelaProdutos", {id:id})  */}
                 <Image source={{ uri: imagem }} style={{ width: 150, height: 200, margin: 10 }} />
 
@@ -22,7 +22,6 @@ function TelaProdutos({ route, navigation }) {
             </Pressable>
         </View>
     );
-    console.log(TelaProdutos)
 
     useEffect(() => {
         const load = async () => {
@@ -31,7 +30,8 @@ function TelaProdutos({ route, navigation }) {
             // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
 
             let result = data.filter(p => p.idcategoria == idCategoria)
-                .map(({ nome, preco, imagem }) => ({
+                .map(({ id, nome, preco, imagem }) => ({
+                    id: id,
                     nome: nome,
                     preco: preco,
                     imagem: imagem

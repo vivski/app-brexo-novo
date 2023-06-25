@@ -1,9 +1,10 @@
 import { StyleSheet, Text, View, TextInput, Image, Pressable, FlatList } from 'react-native';
+import { useEffect, useState } from 'react';
 // import Header from '../../components/Header';
 
-export default function TelaProduto() {
+export default function TelaProduto({route}) {
 
-    const idProduto = id;
+    const produtoId = route.params;
 
     const [produto, setProduto] = useState({});
 
@@ -25,7 +26,7 @@ export default function TelaProduto() {
 
     useEffect(() => {
         const load = async () => {
-            const resultApi = await fetch(`https://6480b615f061e6ec4d49bfea.mockapi.io/produtos/${idProduto}`)
+            const resultApi = await fetch(`https://6480b615f061e6ec4d49bfea.mockapi.io/produtos/${produtoId}`)
             const result = await resultApi.json();
             setProduto(result);
         }
@@ -37,9 +38,9 @@ export default function TelaProduto() {
         <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
             <View>
                 <Produto
-                nome={produto.nome}
-                preco={produto.preco}
-                imagem={produto.imagem}/>
+                nome={produto?.nome}
+                preco={produto?.preco}
+                imagem={produto?.imagem}/>
             </View>
         </View>
     );
