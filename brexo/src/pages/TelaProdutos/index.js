@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native"
 
-function TelaProdutos({ route }) {
+function TelaProdutos({ route, navigation }) {
 
     const idCategoria = route.params.id;
 
@@ -10,7 +10,7 @@ function TelaProdutos({ route }) {
     const Produto = ({ nome, imagem, preco }) => (
         <View style={{ width: 200, height: 250 }}>
 
-            <Pressable onPress={() => { }}>
+            <Pressable onPress={() => { navigation.navigate('TelaProduto', {id:id})}}>
                 {/* navigation.navigate("TelaProdutos", {id:id})  */}
                 <Image source={{ uri: imagem }} style={{ width: 150, height: 200, margin: 10 }} />
 
@@ -21,8 +21,8 @@ function TelaProdutos({ route }) {
 
             </Pressable>
         </View>
-
     );
+    console.log(TelaProdutos)
 
     useEffect(() => {
         const load = async () => {
