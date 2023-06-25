@@ -43,7 +43,7 @@ export default function TelaCategorias({navigation}){
     <View style={styles.container}>
                 <Header/>
         
-            <View style={styles.botaoPesquisar}>
+            {/* <View style={styles.botaoPesquisar}>
                 <TextInput style={styles.cssInput}/>
 
                 < Pressable style={{paddingLeft: 10 }} >
@@ -52,7 +52,7 @@ export default function TelaCategorias({navigation}){
                         source={require('../../../assets/img/icone-pesquisa.png')} />
                 </View>
                 </Pressable>
-            </View>
+            </View> */}
     
         <View style={{display:'flex',lexDirection: 'column',paddingBottom: 6, marginTop: 50, backgroundColor:'#F7F0F6' }}>
        

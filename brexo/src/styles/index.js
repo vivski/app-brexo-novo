@@ -8,4 +8,4 @@ const styles = {
     neutra: '#737373',
     neutraClara: '#666464', 
     neutraEscura: '#3C3838'
-}
+} 
