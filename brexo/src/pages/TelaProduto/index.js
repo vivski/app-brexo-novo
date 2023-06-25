@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 export default function TelaProduto({route}) {
 
-    const produtoId = route.params;
+    const {produtoId} = route.params;
 
     const [produto, setProduto] = useState({});
 
