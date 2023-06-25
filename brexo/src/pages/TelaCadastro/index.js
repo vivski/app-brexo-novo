@@ -11,18 +11,18 @@ export default function TelaCadastro({ navigation }) {
     const [senha, setSenha] = useState()
     const [confirmSenha, setConfirmSenha] = useState()
 
-    function Cadastrar() {
+  async function Cadastrar() {
         if (senha != confirmSenha) {
             return;
         }
-        fetch("http://localhost:3004/usuario", {
-            method: "POST",
-            body: {
-                email: email,
-                senha: senha
-            }
-        })
-    }
+    await fetch("http://localhost:3004/usuario", {
+        method:"POST",
+        body:{
+            email:email,
+            senha:senha
+        }
+    }) 
+}
     return (
         <View style={styles.container}>
             <View style={styles.cssLogo}>
