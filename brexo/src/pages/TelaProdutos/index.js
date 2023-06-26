@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native"
+import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native";
+import { Avatar, Button, Card } from 'react-native-paper';
 
 function TelaProdutos({ route, navigation }) {
 
@@ -15,14 +16,22 @@ function TelaProdutos({ route, navigation }) {
                 <Image source={{ uri: imagem }}
                     style={{
                         width: 150,
-                        height: 200,
-                        margin: 10
-                    }}/>
+                        height: 150,
+                        margin: 5,
+                        alignSelf: 'center'
+                    }} />
 
                 <View style={{ width: 150 }}>
                     <Text numberOfLines={1}> {nome} </Text>
                     <Text> {preco} </Text>
                 </View>
+
+                <Card>
+                    <Card.Actions>
+                        <Button icon="cart"></Button>
+                        <Button icon="heart"></Button>
+                    </Card.Actions>
+                </Card>
 
             </Pressable>
         </View>

@@ -59,7 +59,8 @@ export default function TelaCategorias({ navigation }) {
                 lexDirection: 'column',
                 paddingBottom: 6,
                 marginTop: 50,
-                backgroundColor: '#F7F0F6'
+                backgroundColor: '#F7F0F6', 
+                alignSelf: 'center'
             }}>
 
 
@@ -97,12 +98,12 @@ const styles = StyleSheet.create({
         //  paddingBottom: 11 
 
     },
-    botaoPesquisar: {
-        flexDirection: 'row',
-        display: 'flex',
-        justifyContent: 'center',
-        paddingBottom: 10
-    },
+    // botaoPesquisar: {
+    //     flexDirection: 'row',
+    //     display: 'flex',
+    //     justifyContent: 'center',
+    //     paddingBottom: 10
+    // },
     cssInput: {
         background: '#F7F0F6',
         borderWidth: 1,
@@ -112,9 +113,10 @@ const styles = StyleSheet.create({
         padding: 5
     },
     cssImagensCategorias: {
-        width: 160,
-        height: 160,
-        borderRadius: 6
+        width: 150,
+        height: 150,
+        borderRadius: 6, 
+
     },
     cssViewCategorias: {
         display: 'flex',

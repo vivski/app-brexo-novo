@@ -26,8 +26,9 @@ export default function TelaProduto({ route }) {
                         alignSelf: 'center'
                     }} />
 
-                <Card.Title title={nome} subtitle={preco}
-                    style={{ size: 50 }} />
+                <Card.Title title={nome} subtitle={preco} 
+                    titleStyle={{ fontSize: 20 }}
+                    subtitleStyle={{fontSize: 20}} />
 
                 <Card.Actions>
                     <Button icon="cart"></Button>
