@@ -10,9 +10,14 @@ function TelaProdutos({ route, navigation }) {
     const Produto = ({ id, nome, imagem, preco }) => (
         <View style={{ width: 200, height: 250 }}>
 
-            <Pressable onPress={() => { navigation.navigate('TelaProduto', {produtoId:id})}}>
+            <Pressable onPress={() => { navigation.navigate('TelaProduto', { produtoId: id }) }}>
                 {/* navigation.navigate("TelaProdutos", {id:id})  */}
-                <Image source={{ uri: imagem }} style={{ width: 150, height: 200, margin: 10 }} />
+                <Image source={{ uri: imagem }}
+                    style={{
+                        width: 150,
+                        height: 200,
+                        margin: 10
+                    }}/>
 
                 <View style={{ width: 150 }}>
                     <Text numberOfLines={1}> {nome} </Text>
@@ -53,6 +58,7 @@ function TelaProdutos({ route, navigation }) {
                     numColumns={2}
                     renderItem={({ item }) => (
                         <Produto
+                            id={item.id}
                             nome={item.nome}
                             preco={item.preco}
                             imagem={item.imagem} />
