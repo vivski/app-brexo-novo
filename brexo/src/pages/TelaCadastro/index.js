@@ -18,8 +18,13 @@ export default function TelaCadastro({ navigation }) {
     await fetch("http://localhost:3004/usuario", {
         method:"POST",
         body:{
+        
             email:email,
             senha:senha
+        },
+        header:{
+            email:email,
+            senha:senha    
         }
     }) 
 }
