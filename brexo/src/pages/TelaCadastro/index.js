@@ -10,24 +10,25 @@ export default function TelaCadastro({ navigation }) {
     const [email, setEmail] = useState()
     const [senha, setSenha] = useState()
     const [confirmSenha, setConfirmSenha] = useState()
+    
 
-  async function Cadastrar() {
+
+    async function Cadastrar() {
         if (senha != confirmSenha) {
             return;
         }
-    await fetch("http://localhost:3004/usuario", {
-        method:"POST",
-        body:{
-        
-            email:email,
-            senha:senha
-        },
-        header:{
-            email:email,
-            senha:senha    
-        }
-    }) 
-}
+
+        const result = await fetch("http://localhost:3004/usuario", {
+            method:"POST",
+             headers:{"Content-type": "application/json;charset=UTF-8"},
+                body:JSON.stringify({
+                    email:email,
+                    senha:senha
+                }),
+        });
+
+        console.log(JSON.stringify(result));
+    }
     return (
         <View style={styles.container}>
             <View style={styles.cssLogo}>
