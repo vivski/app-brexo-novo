@@ -1,6 +1,5 @@
 import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'react-native';
 // import Header from '../../components/Header';
-import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native";
 import { Avatar, Button, Card } from 'react-native-paper';
 
 export default function TelaFavoritos({ route, navigation }) {
@@ -13,24 +12,25 @@ export default function TelaFavoritos({ route, navigation }) {
         <View style={{ width: 200, height: 250 }}>
 
             <Pressable onPress={() => { navigation.navigate('TelaProduto', { produtoId: id }) }}>
-                {/* navigation.navigate("TelaProdutos", {id:id})  */}
+
                 <Card style={{
                     width: 350,
                     height: 500,
                     marginTop: 150,
-                    backgroundColor: '#F7F0F6'
-                }}>
+                    backgroundColor: '#F7F0F6'}}>
+
                     <Card.Cover source={{ uri: imagem }}
                         style={{
                             width: 250,
                             height: 300,
                             margin: 10,
                             alignSelf: 'center'
-                        }} />
+                    }}/>
 
                     <Card.Title title={nome} subtitle={preco} 
                         titleStyle={{ fontSize: 20 }}
-                        subtitleStyle={{fontSize: 20}} />
+                        subtitleStyle={{fontSize: 20
+                    }}/>
 
                     <Card.Actions>
                         <Button icon="cart"></Button>
@@ -57,7 +57,7 @@ export default function TelaFavoritos({ route, navigation }) {
                 }));
 
             setProdutos(result);
-        }
+        };
 
         load();
     }, []);
@@ -73,13 +73,14 @@ export default function TelaFavoritos({ route, navigation }) {
                             id={item.id}
                             nome={item.nome}
                             preco={item.preco}
-                            imagem={item.imagem} />
+                            imagem={item.imagem} 
+                        />
                     )}
                 />
             </View>
         </View>
-    )
-}
+    );
+};
 
 const styles = StyleSheet.create({
     container: {

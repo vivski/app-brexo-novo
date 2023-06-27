@@ -22,7 +22,7 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
                 justifyContent: 'flex-end'
             }}>
                 <View>
-                    <Text>nova senha:</Text>
+                    <Text style={{fontSize: 16}}>nova senha:</Text>
                     <TextInput style={{
                         background: '#fff',
                         borderWidth: 1,
@@ -35,7 +35,7 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
                 </View>
 
                 <View>
-                    <Text style={{ marginTop: 10 }}>senha:</Text>
+                    <Text style={{ marginTop: 10, fontSize: 16 }}>senha:</Text>
                     <TextInput style={{
                         background: '#fff',
                         borderWidth: 1,
@@ -52,15 +52,14 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
 
             <Pressable onPress={() => navigation.navigate('TelaLogin')}
                 style={{
-                    backgroundColor: '#666464',
-                    textAlign: 'center',
-                    borderRadius: 4, width: 100,
-                    height: 30,
-                    justifyContent: 'center',
-                    alignItems: 'center'
+                    backgroundColor: '#7A6276',
+                    borderRadius: 4,
+                    alignSelf: 'center',
+                    width: 120,
+                    padding: 10,
                 }}>
 
-                <Text style={{ color: "white" }}>confirmar</Text>
+                <Text style={{  color: 'white', textAlign: 'center', fontSize: 25 }}>confirmar</Text>
 
             </Pressable>
 

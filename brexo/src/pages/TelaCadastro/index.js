@@ -47,7 +47,7 @@ export default function TelaCadastro({ navigation }) {
                 justifyContent: 'flex-end'
             }}>
                 <View>
-                    <Text>e-mail:</Text>
+                    <Text style={{fontSize: 16}}>e-mail:</Text>
                     <TextInput
                         onChangeText={(text) => {
                             setEmail(text)
@@ -64,7 +64,7 @@ export default function TelaCadastro({ navigation }) {
                 </View>
 
                 <View>
-                    <Text style={{ marginTop: 10 }}>senha:</Text>
+                    <Text style={{ marginTop: 10, fontSize: 16 }}>senha:</Text>
                     <TextInput
                         onChangeText={(text) => {
                             setSenha(text)
@@ -74,7 +74,7 @@ export default function TelaCadastro({ navigation }) {
                             background: '#fff',
                             borderWidth: 1,
                             width: 240,
-                            textAlign: 'start',
+                            textAlign: 'center',
                             color: '#666464',
                             borderRadius: 4,
                             padding: 10,
@@ -84,12 +84,12 @@ export default function TelaCadastro({ navigation }) {
                 </View>
             </View>
 
-            <View>
-                <Text style={{
-                    marginTop: 10,
-                    textAlign: 'center'
-                }}>
-                    confirmar senha:</Text>
+            <View style={{                
+                backgroundColor: '#ffff',
+                alignItems: 'center',
+                justifyContent: 'flex-end'}}>
+
+                <Text style={{ marginTop: 10, fontSize: 16}}>confirmar senha:</Text>
                 <TextInput
                     onChangeText={(text) => {
                         setConfirmSenha(text)
@@ -110,15 +110,14 @@ export default function TelaCadastro({ navigation }) {
 
             <Pressable onPress={() => Cadastrar()}
                 style={{
-                    backgroundColor: '#666464',
-                    textAlign: 'center',
-                    borderRadius: 4, width: 100,
-                    height: 30,
-                    justifyContent: 'center',
-                    alignItems: 'center'
+                    backgroundColor: '#7A6276',
+                    borderRadius: 4,
+                    alignSelf: 'center',
+                    width: 120,
+                    padding: 10,
                 }}>
 
-                <Text style={{ color: "white" }}>cadastrar</Text>
+                <Text style={{  color: 'white', textAlign: 'center', fontSize: 25 }}>cadastrar</Text>
 
             </Pressable>
 

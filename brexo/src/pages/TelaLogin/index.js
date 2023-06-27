@@ -24,7 +24,7 @@ export default function TelaLogin() {
 
                 <View>
 
-                    <Text>e-mail:</Text>
+                    <Text style={{fontSize: 16}}>e-mail:</Text>
                     <TextInput style={{
 
                         backgroundColor: '#fff',
@@ -41,7 +41,7 @@ export default function TelaLogin() {
 
                 <View>
 
-                    <Text style={{ marginTop: 10 }}>senha:</Text>
+                    <Text style={{ marginTop: 10, fontSize: 16}}>senha:</Text>
 
                     <TextInput secureTextEntry={true} style={{
                         backgroundColor: '#fff',
@@ -75,7 +75,7 @@ export default function TelaLogin() {
                             marginTop: 10
                         }}>
 
-                            <Text>esqueceu a senha?</Text>
+                            <Text style={{fontSize: 16}}>esqueceu a senha?</Text>
                         </View>
 
                     </View>
@@ -113,7 +113,8 @@ export default function TelaLogin() {
                             backgroundColor: 'white',
                             paddingLeft: 110,
                             paddingRight: 110,
-                            marginBottom: 10
+                            marginBottom: 10,
+                            fontSize: 16
                         }}>
                         criar conta
                     </Text>
