@@ -1,10 +1,9 @@
 import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'react-native';
 // import Header from '../../components/Header';
 import { Avatar, Button, Card } from 'react-native-paper';
+import { useEffect, useState } from 'react';
 
 export default function TelaFavoritos({ route, navigation }) {
-
-    const idCategoria = route.params.id;
 
     const [produtos, setProdutos] = useState([]);
 
@@ -33,8 +32,8 @@ export default function TelaFavoritos({ route, navigation }) {
                     }}/>
 
                     <Card.Actions>
-                        <Button icon="cart"></Button>
-                        <Button icon="heart"></Button>
+                        <Button icon="cart" onPress={() => { navigation.navigate ('TelaCarrinho')}}>  </Button>
+                        <Button icon="heart" onPress={() => { navigation.navigate ('TelaFavoritos')}}></Button>
                     </Card.Actions>
 
                 </Card>
@@ -48,8 +47,7 @@ export default function TelaFavoritos({ route, navigation }) {
             const data = await resultApi.json();
             // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
 
-            let result = data.filter(p => p.idcategoria == idCategoria)
-                .map(({ id, nome, preco, imagem }) => ({
+            let result = data.map(({ id, nome, preco, imagem }) => ({
                     id: id,
                     nome: nome,
                     preco: preco,
