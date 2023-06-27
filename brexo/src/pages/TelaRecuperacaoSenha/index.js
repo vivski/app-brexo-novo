@@ -7,22 +7,19 @@ import Logo from '../../components/Logo';
 export default function TelaRecuperacaoDeSenha({ navigation }) {
     return (
         <View style={styles.container}>
+
             <View style={styles.cssLogo}>
-                <Image style={{
-                    width: 300,
-                    height: 200
-                }}
-                    source={Logo} />
+                <Logo />
             </View>
 
             <View style={{
-                flex: 1,
+                // flex: 0.7,
                 backgroundColor: '#ffff',
                 alignItems: 'center',
                 justifyContent: 'flex-end'
             }}>
                 <View>
-                    <Text style={{fontSize: 16}}>nova senha:</Text>
+                    <Text style={{ fontSize: 16 }}>nova senha:</Text>
                     <TextInput style={{
                         background: '#fff',
                         borderWidth: 1,
@@ -59,7 +56,7 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
                     padding: 10,
                 }}>
 
-                <Text style={{  color: 'white', textAlign: 'center', fontSize: 25 }}>confirmar</Text>
+                <Text style={{ color: 'white', textAlign: 'center', fontSize: 25 }}>confirmar</Text>
 
             </Pressable>
 
@@ -79,17 +76,24 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
+        display: 'flex',
+        flexDirection: 'column',
         flex: 1,
-        backgroundColor: '#fff'
-
+        backgroundColor: '#fff',
+        borderWidth: 2,
+        borderColor: 'red'
+        
     },
     cssLogo: {
-        flex: 6,
+        // flex: 0.9,
+        borderWidth: 2,
+        borderColor: 'blue',
+        backgroundColor: '#fff',
         flexDirection: 'row',
         backgroundColor: '#ffff',
         alignItems: 'center',
         justifyContent: 'space-around',
-        marginTop: Constants.statusBarHeight
+        marginTop: 200
     },
 
 });
