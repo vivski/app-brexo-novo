@@ -31,17 +31,11 @@ export default function TelaCadastro({ navigation }) {
     }
     return (
         <View style={styles.container}>
-            <View style={styles.cssLogo}>
-                <Image style={{
-                    width: 300,
-                    height: 200
-                }}
-                    source={Logo}
-                />
+           <View style={styles.cssLogo}>
+                <Logo />
             </View>
 
             <View style={{
-                flex: 1,
                 backgroundColor: '#ffff',
                 alignItems: 'center',
                 justifyContent: 'flex-end'
@@ -56,7 +50,7 @@ export default function TelaCadastro({ navigation }) {
                             background: '#fff',
                             borderWidth: 1,
                             width: 240,
-                            color: '#666464',
+                            color: '#B2A5A1',
                             borderRadius: 4,
                             padding: 10,
                             marginBottom: 4
@@ -75,7 +69,7 @@ export default function TelaCadastro({ navigation }) {
                             borderWidth: 1,
                             width: 240,
                             textAlign: 'center',
-                            color: '#666464',
+                            color: '#B2A5A1',
                             borderRadius: 4,
                             padding: 10,
                             marginBottom: 4
@@ -99,8 +93,8 @@ export default function TelaCadastro({ navigation }) {
                         background: '#fff',
                         borderWidth: 1,
                         width: 240,
-                        textAlign: 'start',
-                        color: '#666464',
+                        textAlign: 'center',
+                        color: '#B2A5A1',
                         borderRadius: 4,
                         padding: 10,
                         marginBottom: 4
@@ -137,17 +131,19 @@ export default function TelaCadastro({ navigation }) {
 
 const styles = StyleSheet.create({
     container: {
+        display: 'flex',
+        flexDirection: 'column',
         flex: 1,
-        backgroundColor: '#fff'
+        backgroundColor: '#fff',
 
     },
     cssLogo: {
-        flex: 6,
+        backgroundColor: '#fff',
         flexDirection: 'row',
         backgroundColor: '#ffff',
         alignItems: 'center',
         justifyContent: 'space-around',
-        marginTop: Constants.statusBarHeight
+        marginTop: 200
     },
 
 });
