@@ -13,7 +13,6 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
             </View>
 
             <View style={{
-                // flex: 0.7,
                 backgroundColor: '#ffff',
                 alignItems: 'center',
                 justifyContent: 'flex-end'
@@ -24,7 +23,7 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
                         background: '#fff',
                         borderWidth: 1,
                         width: 240,
-                        color: '#666464',
+                        color: '#B2A5A1',
                         borderRadius: 4,
                         padding: 10,
                         marginBottom: 4
@@ -38,7 +37,7 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
                         borderWidth: 1,
                         width: 240,
                         textAlign: 'start',
-                        color: '#666464',
+                        color: '#B2A5A1',
                         borderRadius: 4,
                         padding: 10,
                         marginBottom: 4
@@ -56,7 +55,7 @@ export default function TelaRecuperacaoDeSenha({ navigation }) {
                     padding: 10,
                 }}>
 
-                <Text style={{ color: 'white', textAlign: 'center', fontSize: 25 }}>confirmar</Text>
+                <Text style={{ color: 'white', textAlign: 'center', fontSize: 25 }}> confirmar</Text>
 
             </Pressable>
 
@@ -80,14 +79,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         flex: 1,
         backgroundColor: '#fff',
-        borderWidth: 2,
-        borderColor: 'red'
-        
     },
     cssLogo: {
-        // flex: 0.9,
-        borderWidth: 2,
-        borderColor: 'blue',
         backgroundColor: '#fff',
         flexDirection: 'row',
         backgroundColor: '#ffff',
