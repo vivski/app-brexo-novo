@@ -20,7 +20,7 @@ export default function TelaCategorias({ navigation }) {
                     style={styles.cssImagensCategorias}
                     source={{ uri: imagem }}
                 />
-                <Text style={{textAlign: 'center', fontSize: 24, paddingTop: 8}}>{nome}</Text>
+                <Text style={{textAlign: 'center', fontSize: 24, paddingTop: 8, color: '#362533'}}>{nome}</Text>
             </Pressable>
         </View>
     );
@@ -49,17 +49,11 @@ export default function TelaCategorias({ navigation }) {
             
                 <FlatList style={{
                     display: 'flex',
-                    // flexDirection: 'column',
                     paddingBottom: 6,
                     marginTop: 50,
                     paddingTop: 20,
                     backgroundColor: '#F7F0F6',
-                    // alignSelf: 'center',
-                    // width: '100%',
-                    // height: '100%',
                     gap: 30,
-                    // flex: 1
-                    // alignContent:
                 }}
                     data={categorias}
                     numColumns={2}
@@ -89,35 +83,12 @@ const styles = StyleSheet.create({
 
         display: 'flex',
         flexDirection: 'column'
-        //  flexDirection: 'column', 
-        //  paddingBottom: 11 
-
     },
-    // cssInput: {
-    //     background: '#F7F0F6',
-    //     borderWidth: 1,
-    //     width: 300,
-    //     color: '#666464',
-    //     borderRadius: 20,
-    //     padding: 5
-    // },
     cssImagensCategorias: {
-        // padding: 12,
         width: 150,
         aspectRatio: '1/1',
         resizeMode: 'contain',
         borderRadius: 6
 
     },
-    // cssViewCategorias: {
-    //     display: 'flex',
-    //     alignSelf: 'center',
-    //     flexDirection: 'row',
-    //     backgroundColor: '#D9D9D9',
-    //     // marginTop: 10,
-    //     borderRadius: 20,
-    //     // paddingLeft: 10
-    // },
-
-
 });
