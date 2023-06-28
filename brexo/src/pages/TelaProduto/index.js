@@ -45,7 +45,7 @@ export default function TelaProduto({ route }) {
             const resultApi = await fetch(`https://6480b615f061e6ec4d49bfea.mockapi.io/produtos/${produtoId}`)
             const result = await resultApi.json();
             setProduto(result);
-        }
+        }  
 
         load();
     }, []);

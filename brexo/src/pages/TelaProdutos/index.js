@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native";
 import { Avatar, Button, Card } from 'react-native-paper';
+import axios from "axios";
 
 function TelaProdutos({ route, navigation }) {
 
     const idCategoria = route.params.id;
 
     const [produtos, setProdutos] = useState([]);
-
+ console.log(produtos)
+ 
     const Produto = ({ id, nome, imagem, preco }) => (
         <View style={{ width: 200, height: 250 }}>
 
@@ -39,10 +41,11 @@ function TelaProdutos({ route, navigation }) {
 
     useEffect(() => {
         const load = async () => {
-            const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/produtos/')
+            const resultApi = await axios.get('https://localhost:3004/brexo/produtos')
             const data = await resultApi.json();
             // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
 
+        
             let result = data.filter(p => p.idcategoria == idCategoria)
                 .map(({ id, nome, preco, imagem }) => ({
                     id: id,
@@ -58,6 +61,8 @@ function TelaProdutos({ route, navigation }) {
 
         load();
     }, []);
+
+
 
     return (
         <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
