@@ -61,7 +61,8 @@ export default function TelaCompras({ route, navigation }) {
         }, []);
 
     return (
-            <BaseLayout>
+        // tentativa de fazer a barra inferior funcionar na telaCompras usando esse BaseLayout
+            <BaseLayout> 
         <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
             <View >
                 <FlatList
