@@ -3,6 +3,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TelaCategorias from './../../pages/TelaCategorias'
 import TelaFavoritos from '../TelaFavoritos';
 
+
+
 const Stack = createNativeStackNavigator();
 
 
@@ -23,7 +25,7 @@ function NavigatorFavoritos() {
             name="TelaCategorias" 
             component={TelaCategorias}
           />
-    
+
           </Stack.Navigator>
        
       );

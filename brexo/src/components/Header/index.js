@@ -1,9 +1,10 @@
 import React from 'react'
-import {View,StyleSheet,Text,StatusBar,Image} from 'react-native'
+import {View,StyleSheet,Text,Image, Button} from 'react-native'
+import TelaCarrinho from '../../pages/TelaCarrinho';
 
 
 
-const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 68;
+// const statusBarHeight = StatusBar.currentHeight ? StatusBar.currentHeight + 22 : 68;
 
 
 export default function Header(){
@@ -19,11 +20,11 @@ export default function Header(){
 const styles = StyleSheet.create({
     container:{
     backgroundColor:'#ffff',
-    paddingTop: statusBarHeight
     },
     logo: {
         width: 150,
-        height: 50,
-        resizeMode: 'contain',
+        height: 40,
       }
 })
+
+

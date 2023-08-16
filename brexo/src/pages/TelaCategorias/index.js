@@ -1,6 +1,4 @@
 import { StyleSheet, Text, View, TextInput, Image, Pressable, FlatList } from 'react-native';
-import Header from '../../components/Header';
-// import TabNavigator from '../../components/barraInferior';
 import { useEffect, useState } from 'react';
 import { SafeAreaView } from 'react-native-web';
 
@@ -44,16 +42,17 @@ export default function TelaCategorias({ navigation }) {
     return (
 
         <View style={styles.container}>
-            <Header />
+
 
             
                 <FlatList style={{
                     display: 'flex',
                     paddingBottom: 6,
-                    marginTop: 50,
-                    paddingTop: 20,
+                    // marginTop: 50,
+                    marginTop: 0,
+                    paddingTop: 10,
                     backgroundColor: '#F7F0F6',
-                    gap: 30,
+                    gap: 40,
                 }}
                     data={categorias}
                     numColumns={2}

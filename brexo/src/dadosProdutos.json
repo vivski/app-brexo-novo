@@ -1,0 +1,422 @@
+[
+    {
+     "nome": "blusa preta com gliter",
+     "preco": "100,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha1.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "1"
+    },
+    {
+     "nome": "blusa marrom",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha2.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "2"
+    },
+    {
+     "nome": "blusa branca com mangas longas",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha3.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "3"
+    },
+    {
+     "nome": "blusa branca",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha4.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "4"
+    },
+    {
+     "nome": "blusa cinza",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha5.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "5"
+    },
+    {
+     "nome": "blusa bege com mangas longas",
+     "preco": "85,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha6.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "6"
+    },
+    {
+     "nome": "blusa verde",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha7.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "7"
+    },
+    {
+     "nome": "blusa com glitter",
+     "preco": "90,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha8.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "8"
+    },
+    {
+     "nome": "blusa rosa",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha9.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "9"
+    },
+    {
+     "nome": "blusa bege",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/blusinha10.jpg?raw=true",
+     "idcategoria": "1",
+     "id": "10"
+    },
+    {
+     "nome": "calça jeans azul",
+     "preco": "85,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca1.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "11"
+    },
+    {
+     "nome": "calça jeans",
+     "preco": "90,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca2.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "12"
+    },
+    {
+     "nome": "calça preta",
+     "preco": "100,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca3.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "13"
+    },
+    {
+     "nome": "calça jeans preta",
+     "preco": "90,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca4.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "14"
+    },
+    {
+     "nome": "calça de couro fake",
+     "preco": "120,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca5.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "15"
+    },
+    {
+     "nome": "calça jeans",
+     "preco": "70,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca6.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "16"
+    },
+    {
+     "nome": "calça jeans preta",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca7.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "17"
+    },
+    {
+     "nome": "calça rosê",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca8.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "18"
+    },
+    {
+     "nome": "calça pink",
+     "preco": "50,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca9.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "19"
+    },
+    {
+     "nome": "calça bege",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/calca10.jpg?raw=true",
+     "idcategoria": "2",
+     "id": "20"
+    },
+    {
+     "nome": "short jeans claro",
+     "preco": "65,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short1.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "21"
+    },
+    {
+     "nome": "short jeans com flores",
+     "preco": "70,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short2.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "22"
+    },
+    {
+     "nome": "short jeans azul",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short3.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "23"
+    },
+    {
+     "nome": "short de couro fake",
+     "preco": "70,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short4.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "24"
+    },
+    {
+     "nome": "short branco",
+     "preco": "50,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short5.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "25"
+    },
+    {
+     "nome": "short pink",
+     "preco": "40,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short6.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "26"
+    },
+    {
+     "nome": "short jeans florido",
+     "preco": "50,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short7.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "27"
+    },
+    {
+     "nome": "short jeans preto",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short8.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "28"
+    },
+    {
+     "nome": "short preto com gliter",
+     "preco": "70,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short9.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "29"
+    },
+    {
+     "nome": "short bege",
+     "preco": "65,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/short10.jpg?raw=true",
+     "idcategoria": "3",
+     "id": "30"
+    },
+    {
+     "nome": "vestido verde",
+     "preco": "50,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido1.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "31"
+    },
+    {
+     "nome": "vestido azul florido",
+     "preco": "55,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido2.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "32"
+    },
+    {
+     "nome": "vestido preto",
+     "preco": "62,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido3.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "33"
+    },
+    {
+     "nome": "vestido azul",
+     "preco": "30,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido4.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "34"
+    },
+    {
+     "nome": "vestido rosa florido",
+     "preco": "35,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido5.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "35"
+    },
+    {
+     "nome": "vestido longo",
+     "preco": "100,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido6.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "36"
+    },
+    {
+     "nome": "vestido azul florido",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido7.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "37"
+    },
+    {
+     "nome": "vestido vermelho",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido8.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "38"
+    },
+    {
+     "nome": "vestido preto florido",
+     "preco": "65,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido9.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "39"
+    },
+    {
+     "nome": "vestido florido",
+     "preco": "50,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/vestido10.jpg?raw=true",
+     "idcategoria": "4",
+     "id": "40"
+    },
+    {
+     "nome": "moletom branco com verde",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom1.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "41"
+    },
+    {
+     "nome": "moletom cinza",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom2.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "42"
+    },
+    {
+     "nome": "moletom lilás",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom3.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "43"
+    },
+    {
+     "nome": "moletom rosa",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom4.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "44"
+    },
+    {
+     "nome": "moletom rosa",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom5.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "45"
+    },
+    {
+     "nome": "moletom branco",
+     "preco": "70,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom6.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "46"
+    },
+    {
+     "nome": "moletom branco",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom7.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "47"
+    },
+    {
+     "nome": "moletom marrom",
+     "preco": "90,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom8.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "48"
+    },
+    {
+     "nome": "moletom verde",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom9.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "49"
+    },
+    {
+     "nome": "moletom azul",
+     "preco": "90,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/moletom10.jpg?raw=true",
+     "idcategoria": "5",
+     "id": "50"
+    },
+    {
+     "nome": "biquini preto",
+     "preco": "45,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini1.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "51"
+    },
+    {
+     "nome": "biquini lilás",
+     "preco": "45,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini2.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "52"
+    },
+    {
+     "nome": "biquini verde",
+     "preco": "50,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini3.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "53"
+    },
+    {
+     "nome": "biquini laranja",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini4.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "54"
+    },
+    {
+     "nome": "biquini branco",
+     "preco": "60,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini5.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "55"
+    },
+    {
+     "nome": "biquini amarelo",
+     "preco": "55,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini6.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "56"
+    },
+    {
+     "nome": "biquini com estampa",
+     "preco": "65,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini7.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "57"
+    },
+    {
+     "nome": "biquini preto",
+     "preco": "65,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini8.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "58"
+    },
+    {
+     "nome": "biquini listrado",
+     "preco": "75,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini9.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "59"
+    },
+    {
+     "nome": "biquini pink",
+     "preco": "80,00",
+     "imagem": "https://github.com/vivski/app-brexo-novo/blob/main/brexo/assets/img/biquini10.jpg?raw=true",
+     "idcategoria": "6",
+     "id": "60"
+    }
+   ]

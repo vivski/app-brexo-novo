@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, Pressable, Image, TextInput} from 'react-native';
 
 
-function TelaCarrinho(){
+export default function TelaCarrinho(){
     return(
 
     
@@ -13,5 +13,3 @@ function TelaCarrinho(){
     )
 
 }
-
-export default TelaCarrinho;

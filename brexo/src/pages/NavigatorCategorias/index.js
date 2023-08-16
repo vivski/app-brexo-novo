@@ -1,16 +1,10 @@
-// import TelaCategorias from "../TelaCategorias"
-
-// stack.navigator - 4 stack screens 
-//     TelaCategorias
-//     TelaProdutos
-//     TelaProduto
-//     TelaCarrinho 
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TelaCategorias from './../../pages/TelaCategorias'
 import TelaProdutos from '../../pages/TelaProdutos'
 import TelaProduto from './../../pages/TelaProduto'
 import TelaCarrinho from './../../pages/TelaCarrinho'
+
 
 const Stack = createNativeStackNavigator();
 
@@ -40,7 +34,8 @@ function NavigatorCategorias() {
          <Stack.Screen 
             name="TelaCarrinho" 
             component={TelaCarrinho}
-          />
+          />       
+
           </Stack.Navigator>
        
       );

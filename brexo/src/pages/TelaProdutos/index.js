@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native";
 import { Avatar, Button, Card } from 'react-native-paper';
+import dadosProdutos from "../../dadosProdutos.json"
 import axios from "axios";
 
 function TelaProdutos({ route, navigation }) {
@@ -41,10 +42,13 @@ function TelaProdutos({ route, navigation }) {
 
     useEffect(() => {
         const load = async () => {
-            const resultApi = await axios.get('https://localhost:3004/brexo/produtos')
-            const data = await resultApi.json();
-            // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
+            // const resultApi = await axios.get('httprs://10.220.30.121:3004/brexo/produtos')
+            // const data = await resultApi.json();
+            // console.log(data);
 
+            // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
+            console.log(dadosProdutos)
+            const data = dadosProdutos
         
             let result = data.filter(p => p.idcategoria == idCategoria)
                 .map(({ id, nome, preco, imagem }) => ({

@@ -43,7 +43,12 @@ function NavigatorTabs() {
     tabBarIcon: ({ color, size }) => (
     <IconButton icon="account-circle" size={size}/>
     ),
-    }}
+    }} />
+
+    <Tab.Screen name="teste" component={IconButton} 
+    
+    
+
     />
 
     </Tab.Navigator>
