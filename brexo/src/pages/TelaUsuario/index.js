@@ -47,13 +47,25 @@ export default function TelaUsuario(){
     </View>
     </TouchableOpacity>
 
+
+    <TouchableOpacity onPress={botaoLogout} >
+    <View style={styles.iconeContainer}>
+    <IconButton icon="delete" color="#05894" size={40} />
+    <Text style={styles.iconeTexto}> Deletar conta </Text>
+    </View>
+    </TouchableOpacity>
+
     <TouchableOpacity onPress={botaoLogout} >
     <View style={styles.iconeContainer}>
     <IconButton icon="logout" color="#05894" size={40} />
     <Text style={styles.iconeTexto}> Sair </Text>
     </View>
-    </TouchableOpacity>
+    </TouchableOpacity> 
+
     </View>
+
+
+    
     
     </View>
     );
@@ -71,7 +83,7 @@ const styles = StyleSheet.create({
     touchableOpacity:{
         alignSelf: 'flex-end',
         marginTop:80, //distancia dos botões do topo da tela
-        marginRight:200 //posicionamento dos botões no canto da tela
+        marginRight:140 //posicionamento dos botões no canto da tela
 
     },
 

@@ -1,44 +1,24 @@
 import { useEffect, useState } from "react";
-import { View, Text, Image, Pressable, FlatList, StyleSheet } from "react-native";
+import { View, Text, Image, Pressable, FlatList, StyleSheet, TouchableOpacity, ActivityIndicator } from "react-native";
 import { Avatar, Button, Card } from 'react-native-paper';
 import dadosProdutos from "../../dadosProdutos.json"
+import { InsertFavorito } from "../../requests/favoritos";
+import TelaFavoritos from "../TelaFavoritos";
+import Produto from "../../components/produto/index"
 import axios from "axios";
+
 
 function TelaProdutos({ route, navigation }) {
 
     const idCategoria = route.params.id;
-
     const [produtos, setProdutos] = useState([]);
- console.log(produtos)
+    console.log(produtos);
+   
+    const adicionarAosFavoritos = async (produto) => {
+ console.log(produto)
+        const res = await InsertFavorito({produtosFavoritos : produto})
  
-    const Produto = ({ id, nome, imagem, preco }) => (
-        <View style={{ width: 200, height: 250 }}>
-
-            <Pressable onPress={() => { navigation.navigate('TelaProduto', { produtoId: id }) }}>
-                {/* navigation.navigate("TelaProdutos", {id:id})  */}
-                <Image source={{ uri: imagem }}
-                    style={{
-                        width: 150,
-                        height: 150,
-                        margin: 5,
-                        alignSelf: 'center'
-                    }} />
-
-                <View style={{ width: 150 }}>
-                    <Text numberOfLines={1}> {nome} </Text>
-                    <Text> {preco} </Text>
-                </View>
-
-                <Card>
-                    <Card.Actions>
-                        <Button icon="cart"></Button>
-                        <Button icon="heart"></Button>
-                    </Card.Actions>
-                </Card>
-
-            </Pressable>
-        </View>
-    );
+    };
 
     useEffect(() => {
         const load = async () => {
@@ -47,7 +27,6 @@ function TelaProdutos({ route, navigation }) {
             // console.log(data);
 
             // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
-            console.log(dadosProdutos)
             const data = dadosProdutos
         
             let result = data.filter(p => p.idcategoria == idCategoria)
@@ -67,8 +46,7 @@ function TelaProdutos({ route, navigation }) {
     }, []);
 
 
-
-    return (
+ return produtos.length > 0 ? (
         <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
             <View >
                 <FlatList
@@ -79,12 +57,17 @@ function TelaProdutos({ route, navigation }) {
                             id={item.id}
                             nome={item.nome}
                             preco={item.preco}
-                            imagem={item.imagem} />
+                            imagem={item.imagem}
+                            functionFavoritos={ () => adicionarAosFavoritos(item)}
+                            functionCarrinho={() =>{}}
+                            
+                            />
+                        
                     )}
                 />
             </View>
         </View>
-    )
+    ): (<ActivityIndicator />  )
 }
 
 const styles = StyleSheet.create({
@@ -94,4 +77,4 @@ const styles = StyleSheet.create({
     },
 
 });
-export default TelaProdutos;
+export default TelaProdutos; 

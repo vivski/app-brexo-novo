@@ -2,15 +2,33 @@ import { StyleSheet, Text, View, Pressable, Image, TextInput } from 'react-nativ
 import Constants from 'expo-constants';
 import Logo from '../../components/Logo';
 import { useNavigation } from '@react-navigation/native'
-import NavigatorTabs from '../../components/barraInferior'
+import { useState } from 'react';
+import requisicaorotaUsuario from '../../api/request/rotaUsuario';
 
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-const Stack = createNativeStackNavigator();
+import TelaCategorias from './../TelaCategorias'
+
+
 
 
 export default function TelaLogin() {
 
     const navigation = useNavigation();
+
+    const [email,setEmail] = useState();
+    const [senha, setSenha] = useState();
+
+
+    async function lidarComOlogin() {
+    try {
+    navigation.navigate("NavigatorTabs")
+    // const recebeReq = await requisicaorotaUsuario.login({dadosUsuario:{email:email,senhaa: senha}}).then(res => res)
+    //     if (recebeReq) {
+    //     navigation.navigate("TelaCategorias")  //se logado
+    //     }
+    } catch (error) {
+        
+    }
+    }
 
     return (
         <View style={styles.container}>
@@ -24,8 +42,11 @@ export default function TelaLogin() {
 
                 <View>
 
-                    <Text style={{fontSize: 16}}>e-mail:</Text>
-                    <TextInput style={{
+                    <Text  style={{fontSize: 16}}>e-mail:</Text>
+                    <TextInput 
+                    onChangeText={ (text) => setEmail(text) }
+
+                    style={{
 
                         backgroundColor: '#fff',
                         borderWidth: 1,
@@ -43,7 +64,9 @@ export default function TelaLogin() {
 
                     <Text style={{ marginTop: 10, fontSize: 16}}>senha:</Text>
 
-                    <TextInput secureTextEntry={true} style={{
+                    <TextInput secureTextEntry={true} 
+                    onChangeText={ (text) => setSenha(text) }
+                    style={{
                         backgroundColor: '#fff',
                         borderWidth: 1,
                         width: 240,
@@ -82,7 +105,7 @@ export default function TelaLogin() {
 
                 </Pressable>
 
-                <Pressable onPress={() => navigation.navigate('NavigatorTabs')}
+                <Pressable onPress={lidarComOlogin}
                     style={{
                         backgroundColor: '#7A6276',
                         borderRadius: 4,

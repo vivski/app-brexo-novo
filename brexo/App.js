@@ -79,10 +79,10 @@ export default function App() {
       /> */}
 
       
-{/* <Stack.Screen 
+<Stack.Screen 
         name="TelaCarrinho" 
         component={TelaCarrinho}
-      /> */}
+      />
 <Stack.Screen 
         name="TelaCompras" 
         component={TelaCompras}

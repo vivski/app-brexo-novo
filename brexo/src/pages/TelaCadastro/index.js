@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Pressable, Image, TextInput } from 'react-nativ
 import Constants from 'expo-constants';
 import Logo from '../../components/Logo';
 import { useState } from 'react';
+import requisicaorotaUsuario from '../../api/request/rotaUsuario';
 //  import Logo from '../../../components/img/brexo-logo.png';
 
 
@@ -18,16 +19,18 @@ export default function TelaCadastro({ navigation }) {
             return;
         }
 
-        const result = await fetch("http://localhost:3004/usuario", {
-            method:"POST",
-             headers:{"Content-type": "application/json;charset=UTF-8"},
-                body:JSON.stringify({
-                    email:email,
-                    senha:senha
-                }),
-        });
+        try {
+            
+       const result = await requisicaorotaUsuario.cadastro({dadosUsuario:{email:email, senha:senha}})
+       console.log(result)
+        if (result.data) {
+            setTimeout( () => {navigation.navigate("TelaLogin")}, 1000 ) //1seg
 
-        console.log(JSON.stringify(result));
+        }   
+        } catch (error) {
+            
+        }
+    
     }
     return (
         <View style={styles.container}>
@@ -41,13 +44,13 @@ export default function TelaCadastro({ navigation }) {
                 justifyContent: 'flex-end'
             }}>
                 <View>
-                    <Text style={{fontSize: 16}}>e-mail:</Text>
+                    <Text style={{fontSize: 16}}> e-mail:</Text>
                     <TextInput
                         onChangeText={(text) => {
                             setEmail(text)
                         }}
                         style={{
-                            background: '#fff',
+                            backgroundColor: '#fff',
                             borderWidth: 1,
                             width: 240,
                             color: '#B2A5A1',
@@ -65,7 +68,7 @@ export default function TelaCadastro({ navigation }) {
                         }}
 
                         style={{
-                            background: '#fff',
+                            backgroundColor: '#fff',
                             borderWidth: 1,
                             width: 240,
                             textAlign: 'center',
@@ -74,7 +77,7 @@ export default function TelaCadastro({ navigation }) {
                             padding: 10,
                             marginBottom: 4
                         }}
-                        secureTextEntry={'true'} />
+                        secureTextEntry={true} />
                 </View>
             </View>
 
@@ -90,7 +93,7 @@ export default function TelaCadastro({ navigation }) {
                     }}
 
                     style={{
-                        background: '#fff',
+                        backgroundColor: '#fff',
                         borderWidth: 1,
                         width: 240,
                         textAlign: 'center',
@@ -99,7 +102,7 @@ export default function TelaCadastro({ navigation }) {
                         padding: 10,
                         marginBottom: 4
                     }}
-                    secureTextEntry={'true'} />
+                    secureTextEntry={true} />
             </View>
 
             <Pressable onPress={() => Cadastrar()}

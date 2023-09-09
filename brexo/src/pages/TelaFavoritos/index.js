@@ -1,89 +1,73 @@
-import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList} from 'react-native';
-// import Header from '../../components/Header';
+import {StyleSheet, Text, View, TextInput, Image, Pressable, FlatList, TouchableOpacity} from 'react-native';
+
 import { Avatar, Button, Card } from 'react-native-paper';
 import { useEffect, useState } from 'react';
+import {ListarFavorito} from './../../requests/favoritos'
 
-export default function TelaFavoritos({ route, navigation }) {
+export default function TelaFavoritos({ route }) {
 
-    const [produtos, setProdutos] = useState([]);
+  const [produtosFavoritos, setProdutosFavoritos] = useState([]);
 
-    const Produto = ({ id, nome, imagem, preco }) => (
-        <View style={{ width: 200, height: 250 }}>
+useEffect( () => { async function Load(){
+   const favoritos = await ListarFavorito()
+   setProdutosFavoritos(favoritos)
+} 
+Load()
+}, [] )
 
-            <Pressable onPress={() => { navigation.navigate('TelaProduto', { produtoId: id }) }}>
+  const calcularTotal = () => {
+      const total = produtosFavoritos.reduce((acc, produto) => acc + produto.preco, 0);
+      return total;
+  };
 
-                <Card style={{
-                    width: 350,
-                    height: 500,
-                    marginTop: 150,
-                    backgroundColor: '#F7F0F6'}}>
+  const removerItemFavorito = (produtoId) => {
+      const novosFavoritos = produtosFavoritos.filter(produto => produto.id !== produtoId);
+      setProdutosFavoritos(novosFavoritos);
+  };
 
-                    <Card.Cover source={{ uri: imagem }}
-                        style={{
-                            width: 250,
-                            height: 300,
-                            margin: 10,
-                            alignSelf: 'center'
-                    }}/>
-
-                    <Card.Title title={nome} subtitle={preco} 
-                        titleStyle={{ fontSize: 20 }}
-                        subtitleStyle={{fontSize: 20
-                    }}/>
-
-                    <Card.Actions>
-                        <Button icon="cart" onPress={() => { navigation.navigate ('TelaCarrinho')}}>  </Button>
-                        <Button icon="heart" onPress={() => { navigation.navigate ('TelaFavoritos')}}></Button>
-                    </Card.Actions>
-
-                </Card>
-            </Pressable>
-        </View>
-    );
-
-    useEffect(() => {
-        const load = async () => {
-            const resultApi = await fetch('https://6480b615f061e6ec4d49bfea.mockapi.io/produtos/')
-            const data = await resultApi.json();
-            // o filter é usado para filtrar elementos de uma coleção com base em uma determinada condição. Ele cria uma nova coleção contendo apenas os elementos que atendem a essa condição
-
-            let result = data.map(({ id, nome, preco, imagem }) => ({
-                    id: id,
-                    nome: nome,
-                    preco: preco,
-                    imagem: imagem
-                }));
-
-            setProdutos(result);
-        };
-
-        load();
-    }, []);
-
-    return (
-        <View style={{ alignSelf: 'center', backgroundColor: '#F7F0F6' }}>
-            <View >
-                <FlatList
-                    data={produtos}
-                    numColumns={2}
-                    renderItem={({ item }) => (
-                        <Produto
-                            id={item.id}
-                            nome={item.nome}
-                            preco={item.preco}
-                            imagem={item.imagem} 
-                        />
-                    )}
-                />
-            </View>
-        </View>
-    );
-};
+  return (
+      <View style={styles.container}>
+          <FlatList
+              data={produtosFavoritos}
+              renderItem={({ item }) => (
+                  <View style={styles.favoriteItem}>
+                      <Image source={{ uri: item.imagem }} style={styles.favoriteImage} />
+                      <View style={{ flex: 1 }}>
+                          <Text>{item.nome}</Text>
+                          <Text>{item.preco}</Text>
+                      </View>
+                      <TouchableOpacity onPress={() => removerItemFavorito(item.id)}>
+                          <Text>Remover</Text>
+                      </TouchableOpacity>
+                  </View>
+              )}
+              keyExtractor={(item) => item.id.toString()}
+          />
+          <Text style={styles.total}>Total: {calcularTotal()} </Text>
+      </View>
+  );
+}
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-    },
-
+  container: {
+      flex: 1,
+      padding: 16,
+      backgroundColor: '#F7F0F6',
+  },
+  favoriteItem: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      marginBottom: 10,
+  },
+  favoriteImage: {
+      width: 50,
+      height: 50,
+      marginRight: 10,
+  },
+  total: {
+      textAlign: 'center',
+      marginTop: 10,
+      fontSize: 18,
+      fontWeight: 'bold',
+  }
 });

@@ -31,10 +31,6 @@ function NavigatorCategorias() {
             name="TelaProduto" 
             component={TelaProduto}
           />    
-         <Stack.Screen 
-            name="TelaCarrinho" 
-            component={TelaCarrinho}
-          />       
 
           </Stack.Navigator>
        
