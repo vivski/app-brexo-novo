@@ -1,8 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import axios from "axios";
-const IP_vivian = "192.168.0.104";
-const IP__jhon = "192.168.0.4";
-const baseUrl = `http://${IP__jhon}:3000`;
+const IP = "192.168.0.104";
+const baseUrl = `http://${IP}:3000`;
 
 export async function InsertFavorito({ id, ...rest }) {
   const user = await AsyncStorage.getItem("userBrexo").then((data) =>
