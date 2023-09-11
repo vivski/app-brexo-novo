@@ -27,7 +27,7 @@ const Produto = ({ id, nome, imagem, preco, functionCarrinho, functionFavoritos}
 
             <Card>
                 <Card.Actions>
-                    <Button icon={"cart"} onPress={functionCarrinho}></Button>
+                    <Button  icon={"cart"} onPress={functionCarrinho}></Button>
                     <Button icon="heart" onPress={functionFavoritos} ></Button>
                 </Card.Actions>
             </Card>

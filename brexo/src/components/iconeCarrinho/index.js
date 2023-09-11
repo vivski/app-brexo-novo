@@ -11,7 +11,7 @@ export default function IconeCarrinho() {
     };
   
     return (
-    <View >
+    <View>
     <TouchableOpacity onPress={handlePress}>
     <IconButton icon="cart" size={30} color="#7A6276" />
     </TouchableOpacity>

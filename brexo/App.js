@@ -28,7 +28,8 @@ export default function App() {
       <Stack.Navigator
         screenOptions={{
           headerShown: true,
-          headerTitle: (props) => <Header />,
+          headerTitleAlign: "center",
+          headerTitle: () => <Header />,
           headerRight: () => <IconeCarrinho />,
         }}
       >
@@ -39,39 +40,32 @@ export default function App() {
             headerShown: false,
           }}
         />
-        <Stack.Screen name="NavigatorTabs" component={NavigatorTabs} />
-
-        {/* <Stack.Screen 
-        name="TelaPrincipal" 
-        component={TelaPrincipal}
-      /> */}
-
-        <Stack.Screen name="TelaCadastro" component={TelaCadastro} />
-
-        <Stack.Screen name="TelaFavoritos" component={TelaFavoritos} />
-
-        <Stack.Screen name="TelaUsuario" component={TelaUsuario} />
+        <Stack.Screen 
+          name="TelaCadastro"
+          component={TelaCadastro} />
 
         <Stack.Screen
           name="TelaRecuperacaoSenha"
           component={TelaRecuperacaoSenha}
         />
 
-        {/* <Stack.Screen 
-        name="TelaProdutos" 
-        component={TelaProdutos}
-      /> */}
+        <Stack.Screen 
+        name="NavigatorTabs"
+        component={NavigatorTabs} />
 
-        {/* <Stack.Screen 
-        name="TelaCarrinho" 
-        component={TelaCarrinho}
-      /> */}
-        <Stack.Screen name="TelaCompras" component={TelaCompras} />
+        <Stack.Screen 
+        name="TelaFavoritos" 
+        component={TelaFavoritos} />
+
+        <Stack.Screen 
+        name="TelaUsuario" 
+        component={TelaUsuario} />
 
         <Stack.Screen
           name="NavigatorCategorias"
           component={NavigatorCategorias}
         />
+
         <Stack.Screen name="TelaCarrinho" component={TelaCarrinho} />
         <Stack.Screen name="TelaCompras" component={TelaCompras} />
 

@@ -8,6 +8,7 @@ import { useNavigation } from '@react-navigation/native';
 export default function TelaCarrinho(){
 const [carrinho, setCarrinho] = useState([])  
 console.log(carrinho.length);
+
 useEffect( () => {
 async function reqCarrinho() {
   try {
