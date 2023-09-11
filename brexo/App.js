@@ -39,7 +39,7 @@ export default function App() {
             headerShown: false,
           }}
         />
-          <Stack.Screen name="NavigatorTabs" component={NavigatorTabs} />
+        <Stack.Screen name="NavigatorTabs" component={NavigatorTabs} />
 
         {/* <Stack.Screen 
         name="TelaPrincipal" 
@@ -72,6 +72,8 @@ export default function App() {
           name="NavigatorCategorias"
           component={NavigatorCategorias}
         />
+        <Stack.Screen name="TelaCarrinho" component={TelaCarrinho} />
+        <Stack.Screen name="TelaCompras" component={TelaCompras} />
 
         <Stack.Screen
           name="NavigatorFavoritos"
