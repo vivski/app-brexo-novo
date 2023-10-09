@@ -23,7 +23,7 @@ export default function TelaLogin() {
     //return navigation.navigate("NavigatorTabs"); //se logado
 
     try {
-      await AsyncStorage.clear();
+      // await AsyncStorage.clear();
 
       const { data } = await requisicaorotaUsuario
         .login({ dadosUsuario: { email: email, senha: senha } })

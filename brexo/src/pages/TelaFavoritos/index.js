@@ -9,15 +9,19 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-import { Avatar, Button, Card } from "react-native-paper";
+import { Avatar, Button, Card,IconButton } from "react-native-paper";
 import { useEffect, useState } from "react";
-import { ListarFavorito } from "../../api/request/rotaFavitos";
+import { ListarFavorito, InsertFavorito } from "../../api/request/rotaFavoritos";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { useNavigation } from '@react-navigation/native';
+import {useFocusEffect} from '@react-navigation/native'
+
 
 export default function TelaFavoritos({ route }) {
   const [produtosFavoritos, setProdutosFavoritos] = useState([]);
-
+  useFocusEffect( ()=> console.log("lalala") )
   useEffect(() => {
+    console.log("texto")
     async function Load() {
       const { id_usuario } = await AsyncStorage.getItem("userBrexo").then(
         (data) => JSON.parse(data)
@@ -27,15 +31,16 @@ export default function TelaFavoritos({ route }) {
       setProdutosFavoritos(favoritos);
     }
     Load();
-  }, []);
+  }, [])
+  
 
-  const calcularTotal = () => {
-    const total = produtosFavoritos.reduce(
-      (acc, produto) => acc + produto.preco,
-      0
-    );
-    return total;
-  };
+  // const calcularTotal = () => {
+  //   const total = produtosFavoritos.reduce(
+  //     (acc, produto) => acc + produto.preco,
+  //     0
+  //   );
+  //   return total;
+  // };
 
   const removerItemFavorito = (produtoId) => {
     const novosFavoritos = produtosFavoritos.filter(
@@ -44,28 +49,47 @@ export default function TelaFavoritos({ route }) {
     setProdutosFavoritos(novosFavoritos);
   };
 
+  const navigation = useNavigation();
+    const botaoInicio = () => {
+    navigation.navigate('TelaCategorias');
+    };
+
   return (
-    <View style={styles.container}>
-      <FlatList
-        data={produtosFavoritos}
-        renderItem={({ item }) => (
-          <View style={styles.favoriteItem}>
+    < View style={styles.container}>
+      {produtosFavoritos.length === 0 ? (
+  <View style={styles.estiloFavoritos}>
+    <IconButton icon="emoticon-sad-outline" size={150} iconColor="#7A6276" />
+    <Text style={styles.estiloTexto}> Favoritos está vazio.</Text>
+    <Pressable onPress={botaoInicio} style={styles.estiloBotao}>
+    <Text style={styles.estiloTextoBotao}> iniciar compra </Text>  
+    </Pressable>
+  </View>
+) : (
+   <>
+  <FlatList
+  data={produtosFavoritos}
+  renderItem={({ item }) => (
+    <View style={styles.favoritoItem}>
             <Image
               source={{ uri: item.imagem }}
-              style={styles.favoriteImage}
-            />
+              style={styles.favoritoImagem}
+              />
             <View style={{ flex: 1 }}>
-              <Text>{item.nome}</Text>
-              <Text>{item.preco}</Text>
+              <Text style={styles.textoNome} >{item.nome}</Text>
+              <Text style={styles.textoPreco} > R$ {item.preco}</Text>
             </View>
-            <TouchableOpacity onPress={() => removerItemFavorito(item.id)}>
-              <Text>Remover</Text>
-            </TouchableOpacity>
+            <View style={styles.icones}>
+            <IconButton icon="delete-forever" iconColor="#7A6276" size={30} onPress={() => removerItemFavorito(item.id)} />
+            <IconButton icon="cart" size={30} onPress={() => InsertFavorito(item)} />
+            </View>
+          
           </View>
         )}
         keyExtractor={(item) => item.id.toString()}
-      />
-      <Text style={styles.total}>Total: {calcularTotal()} </Text>
+        />
+        {/* <Text style={styles.total}>Total: {calcularTotal()} </Text>  */}
+        </>
+        )} 
     </View>
   );
 }
@@ -76,14 +100,14 @@ const styles = StyleSheet.create({
     padding: 16,
     backgroundColor: "#F7F0F6",
   },
-  favoriteItem: {
+  favoritoItem: {
     flexDirection: "row",
     alignItems: "center",
     marginBottom: 10,
   },
-  favoriteImage: {
-    width: 50,
-    height: 50,
+  favoritoImagem: {
+    width: 70,
+    height: 70,
     marginRight: 10,
   },
   total: {
@@ -92,4 +116,38 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: "bold",
   },
+  estiloFavoritos: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 120, // distância do topo
+    marginBottom: 40, // distancia entre o botao e o texto
+  },
+  estiloTexto: {
+    fontSize: 30
+  },
+  estiloTextoBotao: {
+    color: 'white', 
+    textAlign: 'center', 
+    fontSize: 25,
+    fontWeight:'bold'
+  },
+  estiloBotao:{
+    backgroundColor: '#7A6276',
+    borderRadius: 4,
+    alignSelf: 'center',
+    width: 200,
+    padding: 15,
+  },
+  icones: {
+    flexDirection: 'column', 
+    alignItems: 'center'
+  },
+  textoNome: {
+    fontWeight: 'bold',
+    fontSize:20,
+    paddingBottom: 15
+  },
+  textoPreco: {
+    fontWeight:'bold'
+  }
 });

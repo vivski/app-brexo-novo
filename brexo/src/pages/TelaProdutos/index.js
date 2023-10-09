@@ -11,10 +11,11 @@ import {
 } from "react-native";
 import { Avatar, Button, Card } from "react-native-paper";
 import dadosProdutos from "../../dadosProdutos.json";
-import { InsertFavorito } from "../../api/request/rotaFavitos";
+import { InsertFavorito } from "../../api/request/rotaFavoritos";
 import TelaFavoritos from "../TelaFavoritos";
 import Produto from "../../components/produto/index";
 import axios from "axios";
+import requisicaorotaCarrinho from "../../api/request/rotaCarrinho";
 
 function TelaProdutos({ route, navigation }) {
   const idCategoria = route.params.id;
@@ -23,6 +24,11 @@ function TelaProdutos({ route, navigation }) {
   const adicionarAosFavoritos = async (produto) => {
     const res = await InsertFavorito(produto);
   };
+
+  const adicionarAoCarrinho = async(produto) => {
+    const res = await requisicaorotaCarrinho.InsertCarrinho(produto)
+  }
+
 
   useEffect(() => {
     const load = async () => {
@@ -60,7 +66,7 @@ function TelaProdutos({ route, navigation }) {
               preco={item.preco}
               imagem={item.imagem}
               functionFavoritos={() => adicionarAosFavoritos(item)}
-              functionCarrinho={() => {}}
+              functionCarrinho={() => adicionarAoCarrinho(item)}
             />
           )}
         />

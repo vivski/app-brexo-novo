@@ -18,6 +18,9 @@ import Header from "./src/components/Header";
 import IconeCarrinho from "./src/components/iconeCarrinho";
 import BaseLayout from "./src/components/baseLayout";
 import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import TelaFinalizarCompra from "./src/pages/TelaFinalizarCompra";
+import TelaCompraFinalizada from "./src/pages/TelaCompraFinalizada";
+
 
 const Stack = createNativeStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
@@ -42,7 +45,10 @@ export default function App() {
         />
         <Stack.Screen 
           name="TelaCadastro"
-          component={TelaCadastro} />
+          component={TelaCadastro}
+          options={{
+            headerShown: false,
+          }} />
 
         <Stack.Screen
           name="TelaRecuperacaoSenha"
@@ -72,6 +78,16 @@ export default function App() {
         <Stack.Screen
           name="NavigatorFavoritos"
           component={NavigatorFavoritos}
+        />
+
+        <Stack.Screen
+          name="TelaFinalizarCompra"
+          component={TelaFinalizarCompra}
+        />
+
+        <Stack.Screen
+          name="TelaCompraFinalizada"
+          component={TelaCompraFinalizada}
         />
 
         <Stack.Screen name="NavigatorUsuario" component={NavigatorUsuario} />

@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column'
     },
     cssImagensCategorias: {
-        width: 150,
+        width: 120,
         aspectRatio: '1/1',
         resizeMode: 'contain',
         borderRadius: 6
