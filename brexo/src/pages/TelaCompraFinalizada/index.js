@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Image, TouchableOpacity, Pressable } from "reac
 import { IconButton } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import TelaCarrinho from "../TelaCarrinho";
+// import TelaCarrinho from "../TelaCarrinho";
 
 
 export default function TelaCompraFinalizada() {

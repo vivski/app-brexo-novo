@@ -1,7 +1,7 @@
 import AsyncStorage from "@react-native-async-storage/async-storage"
 import axios from "axios"
 
-const IP = "192.168.0.104"
+const IP = "192.168.3.10"
 
 const baseUrl = `http://${IP}:3000`
 

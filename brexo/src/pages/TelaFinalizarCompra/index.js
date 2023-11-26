@@ -6,7 +6,7 @@ import { Card, Button, IconButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRoute } from '@react-navigation/native';
-import TelaCompraFinalizada from '../TelaCompraFinalizada';
+// import TelaCompraFinalizada from '../TelaCompraFinalizada';
 
 
 
@@ -21,19 +21,6 @@ const [isBoletoChecked, setBoletoChecked] = useState(false);
 const [isCredito1Checked, setCredito1Checked] = useState(false);
 const [isCredito2Checked, setCredito2Checked] = useState(false);
 
-// const [items, setItems] = useState([
-
-//   { text: 'Pix', checked: false },
-//   { text: 'pagamento 2', checked: false },
-//   { text: 'pagamento 3', checked: false },
-//   { text: 'pagamento 4', checked: false },
-// ]);
-
-// const toggleItem = (index) => {
-//   const updatedItems = [...items];
-//   updatedItems[index].checked = !updatedItems[index].checked;
-//   setItems(updatedItems);
-// };
 
 const RenderItem = ({item,index}) => ( 
   <View style={styles.itemResumo}> 
@@ -54,6 +41,11 @@ const RenderItem = ({item,index}) => (
   const finalizarCompra = () => {
     navigation.navigate('TelaCompraFinalizada')
   }
+
+  const transformarPreco = (preco) => parseFloat(preco.replace(',', '.'));
+  const calcularTotal = () => {
+    return carrinho.reduce((acc, produto) => acc + transformarPreco(produto.preco), 0);
+  };
 
 return(
     
@@ -140,10 +132,10 @@ return(
     {/* acaba aqui */}
 
     </View>
-    <View>
+    <View style={styles.totalBar}>
             <View style={styles.totalContainer}>
             <Text style={styles.total}>Total: </Text>
-            <Text style={styles.somaTotal}> R$ {carrinho.reduce((acc, produto) => acc + produto.preco, 0)}</Text>
+            <Text style={styles.somaTotal}> Total: R$ {calcularTotal().toFixed(2)} </Text>
             </View>
             <Pressable onPress={finalizarCompra} style={styles.botaoFinalizarCompra}>
             <View>
@@ -226,7 +218,8 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     alignSelf: 'center',
     width: 200,
-    padding: 15,     
+    padding: 15, 
+     
   },
   total: {
     fontSize: 30,
@@ -254,6 +247,7 @@ paragraph: {
 //   flexDirection: 'row',
 //   alignItems: 'center',
 // },
+
 
 
 

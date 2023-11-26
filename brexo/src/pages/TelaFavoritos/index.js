@@ -11,7 +11,7 @@ import {
 
 import { Avatar, Button, Card,IconButton } from "react-native-paper";
 import { useEffect, useState } from "react";
-import { ListarFavorito, InsertFavorito } from "../../api/request/rotaFavoritos";
+import { ListarFavorito, InsertFavorito, deletarItemFavorito } from "../../api/request/rotaFavoritos";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from '@react-navigation/native';
 import {useFocusEffect} from '@react-navigation/native'
@@ -34,20 +34,25 @@ export default function TelaFavoritos({ route }) {
   }, [])
   
 
-  // const calcularTotal = () => {
-  //   const total = produtosFavoritos.reduce(
-  //     (acc, produto) => acc + produto.preco,
-  //     0
+  // const removerItemFavorito = (produtoId) => {
+  //   const novosFavoritos = produtosFavoritos.filter(
+  //     (produto) => produto.id !== produtoId
   //   );
-  //   return total;
+  //   setProdutosFavoritos(novosFavoritos);
   // };
 
-  const removerItemFavorito = (produtoId) => {
-    const novosFavoritos = produtosFavoritos.filter(
-      (produto) => produto.id !== produtoId
-    );
-    setProdutosFavoritos(novosFavoritos);
-  };
+  const removerItemFavorito = async (produtoId) => {
+    try {
+      await deletarItemFavorito(produtoId);
+
+      const novosFavoritos = produtosFavoritos.filter(
+        (produto) => produto.id !== produtoId
+      );
+      setProdutosFavoritos(novosFavoritos);
+    } catch (error) {
+      console.error("Erro ao remover item favorito:", error);
+    }
+  }; 
 
   const navigation = useNavigation();
     const botaoInicio = () => {
@@ -69,7 +74,8 @@ export default function TelaFavoritos({ route }) {
   <FlatList
   data={produtosFavoritos}
   renderItem={({ item }) => (
-    <View style={styles.favoritoItem}>
+    <View style={styles.favoritoItem} key={item.id} >
+            
             <Image
               source={{ uri: item.imagem }}
               style={styles.favoritoImagem}
@@ -85,7 +91,11 @@ export default function TelaFavoritos({ route }) {
           
           </View>
         )}
-        keyExtractor={(item) => item.id.toString()}
+        // keyExtractor={(item) => item.id.toString()}
+
+        keyExtractor={(item, index) => `favorito_${item.id}_${index}`}
+
+
         />
         {/* <Text style={styles.total}>Total: {calcularTotal()} </Text>  */}
         </>

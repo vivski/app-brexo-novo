@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Pressable, Image, TextInput, FlatList} from 're
 import requisicaorotaCarrinho from '../../api/request/rotaCarrinho';
 import { Card, Button, IconButton } from 'react-native-paper';
 import { useNavigation } from '@react-navigation/native';
-import TelaFinalizarCompra from '../TelaFinalizarCompra'
+import TelaFinalizarCompra from '../../pages/TelaFinalizarCompra'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
@@ -29,6 +29,9 @@ useEffect(() => {
   Load();
 }, []);
 
+const transformarPreco = (preco) => parseFloat(preco.replace(',', '.'));
+
+
 const RenderItem = ({item,index}) => ( 
 <View style={styles.item}> 
 
@@ -47,6 +50,10 @@ const RenderItem = ({item,index}) => (
 
 </View>
 )
+
+const calcularTotal = () => {
+  return carrinho.reduce((acc, produto) => acc + transformarPreco(produto.preco), 0);
+};
 
 const navigation = useNavigation();
 
@@ -102,7 +109,7 @@ const navigation = useNavigation();
       <View>
             <View style={styles.totalContainer}>
             <Text style={styles.total}>Total: </Text>
-            <Text style={styles.somaTotal}> R$ {carrinho.reduce((acc, produto) => acc + produto.preco, 0)}</Text>
+            <Text style={styles.somaTotal}> Total: R$ {calcularTotal().toFixed(2)} </Text>
             </View>
             <Pressable onPress={finalizarCompra} style={styles.botaoFinalizarCompra}>
             <View>
