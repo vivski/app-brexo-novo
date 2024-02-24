@@ -29,6 +29,7 @@ const RenderItem = ({item,index}) => (
   <View style={styles.itemDetalhes}>
   <Image style={styles.carrinhoImagem} source={{uri:item.imagem}}/>
   
+
   <View style={{flex:1}}>
   <Text style={styles.itemNome}>{item.nome}</Text>
   <Text style={styles.itemPreco}> R$ {item.preco}</Text>
@@ -247,6 +248,7 @@ paragraph: {
 //   flexDirection: 'row',
 //   alignItems: 'center',
 // },
+
 
 
 
